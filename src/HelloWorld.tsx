@@ -1,5 +1,7 @@
 function HelloWorld() {
-    return <h1>Denim Datta</h1>
+    return (
+        <h1>Denim Datta</h1>
+    );
 }
 
-export default HelloWorld
+export default HelloWorld;
