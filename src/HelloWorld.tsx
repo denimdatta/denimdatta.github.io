@@ -1,6 +1,6 @@
 function HelloWorld() {
     return (
-        <h1>Denim Datta</h1>
+        <h1 style={{textAlign: 'center'}}>Denim Datta</h1>
     );
 }
 
