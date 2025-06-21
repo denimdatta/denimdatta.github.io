@@ -1,8 +1,12 @@
 import HelloWorld from "./HelloWorld";
+import TopBox from "./components/TopBox";
 
 function App() {
     return (
-        <div><HelloWorld/></div>
+        <>
+            <TopBox/>
+            <HelloWorld/>
+        </>
     );
 }
 
