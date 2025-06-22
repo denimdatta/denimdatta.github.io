@@ -1,11 +1,16 @@
-import HelloWorld from "./HelloWorld";
-import TopBox from "./components/TopBox";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Home from "./components/Home.tsx";
+import Page404 from "./components/Page404.tsx";
 
 function App() {
     return (
         <>
-            <TopBox/>
-            <HelloWorld/>
+            <BrowserRouter>
+                <Routes>
+                    <Route index element={<Home />} />
+                    <Route path="*" element={<Page404 />} />
+                </Routes>
+            </BrowserRouter>
         </>
     );
 }
