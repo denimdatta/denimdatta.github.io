@@ -42,7 +42,7 @@ class Meteor {
         this.id = id;
         this.className = `meteor animate-meteor`;
         this.style = {
-            height: size * 50 + "px",
+            height: size * 25 + "px",
             width: size * 2 + "px",
             left: x + "%",
             top: y + "%",
