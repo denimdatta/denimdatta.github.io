@@ -4,16 +4,16 @@ import {CN} from "../lib/Utils.ts";
 
 
 function ToggleMode() {
-    const [isDarkMode, setIsDarkMode] = useState(false);
+    const [isDarkMode, setIsDarkMode] = useState(true);
 
     useEffect(() => {
         const storedThemeMode = localStorage.getItem("themeMode");
-        if (storedThemeMode === "dark") {
-            setIsDarkMode(true);
-            document.documentElement.classList.add("dark");
-        } else {
+        if (storedThemeMode === "light") {
             setIsDarkMode(false);
             document.documentElement.classList.remove("dark");
+        } else {
+            setIsDarkMode(true);
+            document.documentElement.classList.add("dark");
         }
     });
 
