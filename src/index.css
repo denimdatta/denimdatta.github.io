@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+@theme {
+    --color-background: hsl(var(--background));
+    --color-foreground: hsl(var(--foreground));
+}
+
+@layer base {
+    :root {
+        --background: 210 40% 98%;
+        --foreground: 222 47% 11%;
+    }
+
+    .dark {
+        --background: 222 47% 4%;
+        --foreground: 223 31% 91%;
+    }
+}
