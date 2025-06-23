@@ -16,3 +16,10 @@
         --foreground: 223 31% 91%;
     }
 }
+
+#root {
+    max-width: 100%;
+    margin:  0 auto;
+    padding: 0;
+    text-align: center;
+}
