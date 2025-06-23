@@ -1,5 +1,6 @@
 import {useEffect, useState} from "react";
 import {FaMoon, FaSun} from "react-icons/fa";
+import {CN} from "../lib/Utils.ts";
 
 
 function ToggleMode() {
@@ -28,12 +29,22 @@ function ToggleMode() {
     };
 
     return (
-        <button onClick={toogleMode}>
-            {isDarkMode
-                ? <FaSun className="h-5 w-5 text-yellow-300"/>
-                : <FaMoon className="h-5 w-5 text-blue-900"/>
-            }
-        </button>
+        <div className={CN("fixed max-sm:hidden top-5 right-5 z-50 p-2 ")}>
+            <button
+                onClick={toogleMode}
+                className={CN(
+                    "rounded-full transition duration-1000 ",
+                    "ease-in-out hover:scale-150 focus:outline-dotted"
+                )}
+            >
+                {isDarkMode
+                    ? <FaSun className="h-5 w-5 text-yellow-300"/>
+                    : <FaMoon className="h-5 w-5 text-blue-900"/>
+                }
+            </button>
+            <br/>
+            <p className="text-xs">Toggle Theme</p>
+        </div>
     );
 }
 
