@@ -1,7 +1,6 @@
 # User Site GitHub Page Project (Denim Datta)
 
 ## Details
-* Author: Denim Datta
 * [GitHub Page User Site](https://denimdatta.github.io/)
 * [GitHub Profile](https://github.com/denimdatta)
 
