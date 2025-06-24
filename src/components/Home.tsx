@@ -1,6 +1,7 @@
 import HelloWorld from "./HelloWorld.tsx";
-import ToggleMode from "./ToggleMode.tsx";
-import Background from "./Background.tsx";
+import HelloWorld from "./HelloWorld";
+import ToggleMode from "./ToggleMode";
+import Background from "./Background";
 
 function Home() {
     return (

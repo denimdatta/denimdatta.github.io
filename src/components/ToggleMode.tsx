@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 import {FaMoon, FaSun} from "react-icons/fa";
-import {CN} from "../lib/Utils.ts";
+import {CN} from "../lib/Utils";
 
 
 function ToggleMode() {
