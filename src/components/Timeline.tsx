@@ -36,37 +36,42 @@ class TimelineElement {
     }
 }
 
-const timelineElementsTest = [
-    new TimelineElement("Work", "name1", "duration1",
-        "location1", "title1",
-        "1Liner1"),
-    new TimelineElement("Work", "name2", "duration2",
-        "location2", "title2",
-        "1Liner2"),
-    new TimelineElement("Study", "name3", "duration3",
-        "location3", "title3",
-        "1Liner3"),
-    new TimelineElement("Work", "name4", "duration4",
-        "location4", "title4",
-        "1Liner4"),
-    new TimelineElement("Study", "name5", "duration5",
-        "location5", "title5",
-        "1Liner5"),
-    new TimelineElement("Test", "name6", "duration6",
-        "location6", "title6",
-        "1Liner6"),
+const timelineElements = [
+    new TimelineElement("Work", "Amazon Development Centre Canada ULC", "January 2023 – June 2025",
+        "Vancouver, BC, Canada", "Software Developer Engineer",
+        "Design, development and delivery of feature modules to enable sellers to " +
+        "pragmatically add and manage listing items in Amazon"),
+    new TimelineElement("Work", "Amazon.Com Services LLC", "July 2019 - January 2023",
+        "Tempe, Arizona, USA", "Software Developer Engineer",
+        "Design, development and delivery of feature modules to enable sellers to " +
+        "pragmatically add and manage listing items in Amazon"),
+    new TimelineElement("Work", "CIS Dept., Arizona State University", "June 2018 – May 2019",
+        "Tempe, Arizona, USA", "Research Aide",
+        "Responsible for helping with developing python scripts to generate results for the Research needs."),
+    new TimelineElement("Study", "Arizona State University", "August 2017 - May 2019",
+        "Tempe, Arizona, USA", "Master of Computer Science ",
+        ""),
+    new TimelineElement("Work", "Aricent Technology (Holding) Limited", "November 2012 – June 2017",
+        "Bengaluru, Karnataka, India", "Software Engineer",
+        "Design, development, and delivery of feature modules. Involved in all the phases of Software Development Life " +
+        "Cycle. Led cross-functional team on major feature development and delivery."),
+    new TimelineElement("Work", "Microsoft (R&D)", "May 2011 – July 2011",
+        "Bengaluru, Karnataka, India", "Intern - SDET",
+        "Designed and automated test cases for List Manager Automation, part of Microsoft adCenter Project."),
+    new TimelineElement("Study", "KIIT University", "August 2009 - May 2012",
+        "Bhubaneswar, Odisha, India", "Bachelor of Technology, Computer Science and Engineering ",
+        ""),
 ];
 
 function Timeline() {
 
     return (
         <div>
-            <h1>Test Block</h1>
             <h3>My Career</h3>
             <div
                 className="flex flex-col md:grid grid-cols-10 mx-auto p-2 text-blue-50 z-1"
             >
-                {timelineElementsTest.map((te, index) => (
+                {timelineElements.map((te, index) => (
                     <div key={index} className="flex md:contents">
                         <div className="col-start-3 col-end-4 md:mx-auto relative">
                             <div className="h-full w-10 flex items-center justify-center">
