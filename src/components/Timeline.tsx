@@ -62,8 +62,9 @@ function Timeline() {
     return (
         <div>
             <h1>Test Block</h1>
+            <h3>My Career</h3>
             <div
-                className="flex flex-col md:grid grid-cols-10 mx-auto p-2 text-blue-50"
+                className="flex flex-col md:grid grid-cols-10 mx-auto p-2 text-blue-50 z-1"
             >
                 {timelineElementsTest.map((te, index) => (
                     <div key={index} className="flex md:contents">
@@ -80,8 +81,17 @@ function Timeline() {
                         <div
                             className={`bg-${te.color} col-start-4 col-end-10 p-4 rounded-xl my-4 shadow-md`}
                         >
-                            <h3 className="font-semibold text-lg mb-1">{te.name}</h3>
-                            <p className="leading-tight text-justify">
+                            <div className="w-full inline-block">
+                                <div className="w-[75%] mb-1 inline-block text-red-200">
+                                    <p className="h-1/2 font-semibold text-lg mb-1">{te.name}</p>
+                                    <p className="h-1/2 font-semibold text-sm mb-1">{te.title}</p>
+                                </div>
+                                <div className="w-[25%] mb-1 inline-block text-yellow-200">
+                                    <p className="h-1/2 right-0 font-thin text-sm text-right mb-1 p-0 italic inline-block">{te.duration}</p>
+                                    <p className="h-1/2 right-0 font-thin text-sm text-right mb-1 p-0 italic inline-block">{te.location}</p>
+                                </div>
+                            </div>
+                            <p className="leading-tight text-justify text-black">
                                 {te.synopsis}
                             </p>
                         </div>
