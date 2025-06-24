@@ -1,6 +1,7 @@
 import HelloWorld from "./HelloWorld";
 import ToggleMode from "./ToggleMode";
 import Background from "./Background";
+import Timeline from "./Timeline";
 
 function Home() {
     return (
@@ -8,6 +9,7 @@ function Home() {
             <ToggleMode/>
             <Background/>
             <HelloWorld/>
+            <Timeline/>
         </div>
     );
 }
