@@ -1,4 +1,3 @@
-import HelloWorld from "./HelloWorld.tsx";
 import HelloWorld from "./HelloWorld";
 import ToggleMode from "./ToggleMode";
 import Background from "./Background";
