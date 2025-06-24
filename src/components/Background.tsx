@@ -35,7 +35,7 @@ class Meteor {
     constructor(id: number) {
         const size = Math.random() * 2 + 1;
         const x = Math.random() * 100;
-        const y = Math.random() * 20;
+        const y = Math.random() * 50;
         const delay = Math.random() * 15;
         const animationDuration = Math.random() * 3 + 3;
 
