@@ -10,7 +10,6 @@ class TimelineElement {
     title: string;
     synopsis: string;
     symbol: JSX.Element;
-    color: string;
 
     // Constructor
     constructor(type: string, name: string, duration: string,
@@ -25,13 +24,10 @@ class TimelineElement {
 
         if (type.toLowerCase() === "work") {
             this.symbol = <FaLaptop className={symCN}/>;
-            this.color = "blue-500";
         } else if (type.toLowerCase() === "study") {
             this.symbol = <PiStudentFill className={symCN}/>;
-            this.color = "green-500";
         } else {
             this.symbol = <FaMagnifyingGlass className={symCN}/>;
-            this.color = "gray-500";
         }
     }
 }
@@ -58,7 +54,7 @@ const timelineElements = [
     new TimelineElement("Work", "Microsoft (R&D)", "May 2011 – July 2011",
         "Bengaluru, Karnataka, India", "Intern - SDET",
         "Designed and automated test cases for List Manager Automation, part of Microsoft adCenter Project."),
-    new TimelineElement("Study", "KIIT University", "August 2009 - May 2012",
+    new TimelineElement("Study", "KIIT University", "August 2008 - May 2012",
         "Bhubaneswar, Odisha, India", "Bachelor of Technology, Computer Science and Engineering ",
         ""),
 ];
@@ -75,16 +71,16 @@ function Timeline() {
                     <div key={index} className="flex md:contents">
                         <div className="col-start-3 col-end-4 md:mx-auto relative">
                             <div className="h-full w-10 flex items-center justify-center">
-                                <div className="h-full w-1 bg-blue-800 pointer-events-none"></div>
+                                <div className="h-full w-1 bg-green-800 pointer-events-none"></div>
                             </div>
                             <div
-                                className={`w-10 h-10 absolute top-1/2 text-center -mt-5 rounded-full bg-${te.color} shadow`}
+                                className="w-10 h-10 absolute top-1/2 text-center -mt-5 rounded-full bg-green-500 shadow"
                             >
                                 {te.symbol}
                             </div>
                         </div>
                         <div
-                            className={`bg-${te.color} col-start-4 col-end-10 p-4 rounded-xl my-4 shadow-md`}
+                            className="bg-blue-500 col-start-4 col-end-10 p-4 rounded-xl my-4 shadow-md"
                         >
                             <div className="w-full inline-block">
                                 <div className="w-[75%] mb-1 inline-block text-red-200">
