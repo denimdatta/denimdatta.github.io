@@ -10,6 +10,8 @@ class TimelineElement {
     title: string;
     synopsis: string;
     symbol: JSX.Element;
+    color: string;
+
     // Constructor
     constructor(type: string, name: string, duration: string,
                 location: string, title: string, synopsis: string) {
@@ -23,10 +25,13 @@ class TimelineElement {
 
         if (type.toLowerCase() === "work") {
             this.symbol = <FaLaptop className={symCN}/>;
+            this.color = "blue-500";
         } else if (type.toLowerCase() === "study") {
             this.symbol = <PiStudentFill className={symCN}/>;
+            this.color = "green-500";
         } else {
             this.symbol = <FaMagnifyingGlass className={symCN}/>;
+            this.color = "gray-500";
         }
     }
 }
@@ -67,13 +72,13 @@ function Timeline() {
                                 <div className="h-full w-1 bg-blue-800 pointer-events-none"></div>
                             </div>
                             <div
-                                className="w-10 h-10 absolute top-1/2 text-center -mt-5 rounded-full bg-blue-500 shadow"
+                                className={`w-10 h-10 absolute top-1/2 text-center -mt-5 rounded-full bg-${te.color} shadow`}
                             >
                                 {te.symbol}
                             </div>
                         </div>
                         <div
-                            className="bg-blue-500 col-start-4 col-end-10 p-4 rounded-xl my-4 shadow-md"
+                            className={`bg-${te.color} col-start-4 col-end-10 p-4 rounded-xl my-4 shadow-md`}
                         >
                             <h3 className="font-semibold text-lg mb-1">{te.name}</h3>
                             <p className="leading-tight text-justify">
