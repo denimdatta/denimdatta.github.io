@@ -2,20 +2,21 @@ import type {JSX} from "react";
 import {FaLaptop} from "react-icons/fa";
 import {FaMagnifyingGlass} from "react-icons/fa6";
 import {PiStudentFill} from "react-icons/pi";
+import {CN} from "../lib/Utils";
 
 class TimelineElement {
+    type: string;
     name: string;
     duration: string;
     location: string;
     title: string;
     synopsis: string;
     symbol: JSX.Element;
-    classNameCircle: string;
-    classNameBox: string;
 
     // Constructor
     constructor(type: string, name: string, duration: string,
                 location: string, title: string, synopsis: string) {
+        this.type = type.toLowerCase();
         this.name = name;
         this.duration = duration;
         this.location = location;
@@ -24,18 +25,13 @@ class TimelineElement {
 
         const symCN = "w-9 h-10 m-auto p-1 block animate-beat-subtle";
 
-        if (type.toLowerCase() === "work") {
+        if (this.type === "work") {
             this.symbol = <FaLaptop className={symCN}/>;
-            this.classNameCircle = "timelineCircle work";
-            this.classNameBox = "timlineBox work";
-        } else if (type.toLowerCase() === "study") {
+        } else if (this.type === "study") {
             this.symbol = <PiStudentFill className={symCN}/>;
-            this.classNameCircle = "timelineCircle study";
-            this.classNameBox = "timlineBox study";
         } else {
             this.symbol = <FaMagnifyingGlass className={symCN}/>;
-            this.classNameCircle = "timelineCircle others";
-            this.classNameBox = "timlineBox others";
+            this.type = "others";
         }
     }
 }
@@ -65,6 +61,9 @@ const timelineElements = [
     new TimelineElement("Study", "KIIT University", "August 2008 - May 2012",
         "Bhubaneswar, Odisha, India", "Bachelor of Technology, Computer Science and Engineering ",
         ""),
+    new TimelineElement("Testing", "Burdwan Municipal High School", "January 1996 - May 2008",
+        "Burdwan, West Bengal, India", "Building Foundation",
+        ""),
 ];
 
 function Timeline() {
@@ -81,13 +80,11 @@ function Timeline() {
                             <div className="h-full w-10 flex items-center justify-center">
                                 <div className="h-full w-1 bg-red-800 pointer-events-none"></div>
                             </div>
-                            <div className={te.classNameCircle}>
+                            <div className={CN(te.type, "timelineCircle")}>
                                 {te.symbol}
                             </div>
                         </div>
-                        <div
-                            className={te.classNameBox}
-                        >
+                        <div className={CN(te.type, "timlineBox")}>
                             <div className="w-full inline-block">
                                 <div className="w-[75%] mb-1 inline-block text-red-200">
                                     <p className="h-1/2 font-semibold text-lg mb-1">{te.name}</p>
