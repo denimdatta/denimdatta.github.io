@@ -57,6 +57,26 @@
     box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
+@utility timelineCircle {
+    @apply w-10 h-10 absolute top-1/2 text-center -mt-5 rounded-full shadow;
+}
+
+@utility timlineBox {
+    @apply col-start-4 col-end-10 p-4 rounded-xl my-4 shadow-md;
+}
+
+@utility work {
+    @apply bg-blue-500;
+}
+
+@utility study {
+    @apply bg-green-500;
+}
+
+@utility others {
+    @apply bg-gray-600;
+}
+
 #root {
     max-width: 100%;
     margin:  0 auto;

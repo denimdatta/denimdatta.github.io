@@ -10,6 +10,8 @@ class TimelineElement {
     title: string;
     synopsis: string;
     symbol: JSX.Element;
+    classNameCircle: string;
+    classNameBox: string;
 
     // Constructor
     constructor(type: string, name: string, duration: string,
@@ -24,10 +26,16 @@ class TimelineElement {
 
         if (type.toLowerCase() === "work") {
             this.symbol = <FaLaptop className={symCN}/>;
+            this.classNameCircle = "timelineCircle work";
+            this.classNameBox = "timlineBox work";
         } else if (type.toLowerCase() === "study") {
             this.symbol = <PiStudentFill className={symCN}/>;
+            this.classNameCircle = "timelineCircle study";
+            this.classNameBox = "timlineBox study";
         } else {
             this.symbol = <FaMagnifyingGlass className={symCN}/>;
+            this.classNameCircle = "timelineCircle others";
+            this.classNameBox = "timlineBox others";
         }
     }
 }
@@ -71,16 +79,14 @@ function Timeline() {
                     <div key={index} className="flex md:contents">
                         <div className="col-start-3 col-end-4 md:mx-auto relative">
                             <div className="h-full w-10 flex items-center justify-center">
-                                <div className="h-full w-1 bg-green-800 pointer-events-none"></div>
+                                <div className="h-full w-1 bg-red-800 pointer-events-none"></div>
                             </div>
-                            <div
-                                className="w-10 h-10 absolute top-1/2 text-center -mt-5 rounded-full bg-green-500 shadow"
-                            >
+                            <div className={te.classNameCircle}>
                                 {te.symbol}
                             </div>
                         </div>
                         <div
-                            className="bg-blue-500 col-start-4 col-end-10 p-4 rounded-xl my-4 shadow-md"
+                            className={te.classNameBox}
                         >
                             <div className="w-full inline-block">
                                 <div className="w-[75%] mb-1 inline-block text-red-200">
