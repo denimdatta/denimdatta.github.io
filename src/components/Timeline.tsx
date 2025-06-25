@@ -22,7 +22,7 @@ class TimelineElement {
         this.title = title;
         this.synopsis = synopsis;
 
-        const symCN = "w-9 h-10 m-auto p-1 block";
+        const symCN = "w-9 h-10 m-auto p-1 block animate-beat-subtle";
 
         if (type.toLowerCase() === "work") {
             this.symbol = <FaLaptop className={symCN}/>;

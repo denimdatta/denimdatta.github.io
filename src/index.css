@@ -4,9 +4,21 @@
     --color-background: hsl(var(--background));
     --color-foreground: hsl(var(--foreground));
 
+    --animate-beat-subtle: beat-subtle 4s ease-in-out infinite;
     --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
     --animate-meteor: meteor 5s linear infinite;
 
+    @keyframes beat-subtle {
+        0% {
+            scale: 80%;
+        }
+        50%{
+            scale: 120%;
+        }
+        100% {
+            scale: 80%;
+        }
+    }
     @keyframes pulse-subtle {
         0%,
         100% {
