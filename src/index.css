@@ -95,7 +95,7 @@
 }
 
 @utility timlineBox {
-    @apply col-start-4 col-end-10 p-4 rounded-xl my-4 shadow-md;
+    @apply p-4 rounded-xl my-4 shadow-md;
 }
 
 @utility work {

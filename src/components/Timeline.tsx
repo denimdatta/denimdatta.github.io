@@ -69,40 +69,42 @@ const timelineElements = [
 function Timeline() {
 
     return (
-        <div>
-            <h3>My Career</h3>
-            <div
-                className="flex flex-col md:grid grid-cols-10 mx-auto p-2 text-blue-50 z-1"
-            >
-                {timelineElements.map((te, index) => (
-                    <div key={index} className="flex md:contents">
-                        <div className="col-start-3 col-end-4 md:mx-auto relative">
-                            <div className="h-full w-10 flex items-center justify-center">
-                                <div className="h-full w-1 bg-red-800 pointer-events-none"></div>
-                            </div>
-                            <div className={CN(te.type, "timelineCircle")}>
-                                {te.symbol}
-                            </div>
-                        </div>
-                        <div className={CN(te.type, "timlineBox")}>
-                            <div className="w-full inline-block">
-                                <div className="w-[75%] mb-1 inline-block text-red-200">
-                                    <p className="h-1/2 font-semibold text-lg mb-1">{te.name}</p>
-                                    <p className="h-1/2 font-semibold text-sm mb-1">{te.title}</p>
+        <section id="timeline" className="relative py-24">
+            <div>
+                <h3>My Career</h3>
+                <div
+                    className="flex flex-col md:grid grid-cols-10 mx-auto p-2 text-blue-50 z-1"
+                >
+                    {timelineElements.map((te, index) => (
+                        <div key={index} className="flex md:contents">
+                            <div className="col-start-3 col-end-4 md:mx-auto relative">
+                                <div className="h-full w-10 flex items-center justify-center">
+                                    <div className="h-full w-1 bg-red-800 pointer-events-none"></div>
                                 </div>
-                                <div className="w-[25%] mb-1 inline-block text-yellow-200">
-                                    <p className="h-1/2 right-0 font-thin text-sm text-right mb-1 p-0 italic inline-block">{te.duration}</p>
-                                    <p className="h-1/2 right-0 font-thin text-sm text-right mb-1 p-0 italic inline-block">{te.location}</p>
+                                <div className={CN(te.type, "timelineCircle")}>
+                                    {te.symbol}
                                 </div>
                             </div>
-                            <p className="leading-tight text-justify text-black">
-                                {te.synopsis}
-                            </p>
+                            <div className={CN(te.type, "col-start-4 col-end-9 timlineBox")}>
+                                <div className="w-full inline-block">
+                                    <div className="w-[75%] mb-1 inline-block text-red-200">
+                                        <p className="h-1/2 font-semibold text-lg mb-1">{te.name}</p>
+                                        <p className="h-1/2 font-semibold text-sm mb-1">{te.title}</p>
+                                    </div>
+                                    <div className="w-[25%] mb-1 inline-block text-yellow-200">
+                                        <p className="h-1/2 right-0 font-thin text-sm text-right mb-1 p-0 italic inline-block">{te.duration}</p>
+                                        <p className="h-1/2 right-0 font-thin text-sm text-right mb-1 p-0 italic inline-block">{te.location}</p>
+                                    </div>
+                                </div>
+                                <p className="leading-tight text-justify text-black">
+                                    {te.synopsis}
+                                </p>
+                            </div>
                         </div>
-                    </div>
-                ))}
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     );
 }
 
