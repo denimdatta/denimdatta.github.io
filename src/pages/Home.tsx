@@ -7,6 +7,7 @@ import Timeline from "../components/Timeline";
 import WorkExperience from "../components/WorkExperience";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
+import Footer from "../components/Footer";
 
 function Home() {
     return (
@@ -20,6 +21,7 @@ function Home() {
             <WorkExperience/>
             <Skills/>
             <Projects/>
+            <Footer/>
         </div>
     );
 }
