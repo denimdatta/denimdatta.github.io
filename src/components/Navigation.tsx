@@ -24,8 +24,8 @@ function Navigation() {
 
     return (
         <nav
-            className={CN("fixed w-full z-40 transition-all duration-300 px-[10%]",
-                isScrolled ? "py-3 bg-background/80 backdrop-blur-lg shadow-xs" : "py-5")}
+            className={CN("fixed w-full z-40 transition-all duration-300",
+                isScrolled ? "py-0 bg-background/20 backdrop-blur-md shadow-xs" : "py-1")}
         >
             <div className="container flex items-center justify-between">
                 <a
@@ -38,7 +38,7 @@ function Navigation() {
                 </a>
 
                 {/* desktop nav */}
-                <div className="hidden md:flex space-x-8">
+                <div className="hidden md:flex space-x-8 px-15">
                     {navigationItems.map((item, key) => (
                         <a key={key} href={item.href}
                            className="text-foreground/80 hover:text-primary transition-colors duration-300"
