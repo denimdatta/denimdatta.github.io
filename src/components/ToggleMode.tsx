@@ -29,7 +29,7 @@ function ToggleMode() {
     };
 
     return (
-        <div className={CN("fixed max-sm:hidden top-5 right-5 z-50 p-2 ")}>
+        <div className={CN("fixed z-50 right-0 p-2")}>
             <button
                 onClick={toogleMode}
                 className={CN(
@@ -43,7 +43,7 @@ function ToggleMode() {
                 }
             </button>
             <br/>
-            <p className="text-xs">Toggle Theme</p>
+            <p className="text-xs max-sm:hidden">Toggle Theme</p>
         </div>
     );
 }
