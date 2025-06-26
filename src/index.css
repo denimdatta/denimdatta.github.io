@@ -9,10 +9,31 @@
 
     --color-footer: hsla(var(--footer));
 
+    --animate-heartbeat: heartbeat 0.8s ease-in-out infinite;
     --animate-beat-subtle: beat-subtle 4s ease-in-out infinite;
     --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
     --animate-meteor: meteor 5s linear infinite;
 
+    @keyframes heartbeat {
+        0% {
+            scale: 85%;
+        }
+        20% {
+            scale: 100%;
+        }
+        40% {
+            scale: 85%;
+        }
+        60% {
+            scale: 100%;
+        }
+        80% {
+            scale: 85%;
+        }
+        100% {
+            scale: 85%;
+        }
+    }
     @keyframes beat-subtle {
         0% {
             scale: 80%;
