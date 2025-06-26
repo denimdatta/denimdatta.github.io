@@ -15,12 +15,14 @@ function Home() {
             <ToggleMode/>
             <Background/>
             <Navigation/>
-            <DenimDatta/>
-            <AboutMe/>
-            <Timeline/>
-            <WorkExperience/>
-            <Skills/>
-            <Projects/>
+            <main>
+                <DenimDatta/>
+                <AboutMe/>
+                <Timeline/>
+                <WorkExperience/>
+                <Skills/>
+                <Projects/>
+            </main>
             <Footer/>
         </div>
     );
