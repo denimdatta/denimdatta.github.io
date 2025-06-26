@@ -2,7 +2,7 @@ import ToggleMode from "./ToggleMode";
 import Background from "./Background";
 import Timeline from "./Timeline";
 import Navigation from "./Navigation";
-import HelloWorld from "./HelloWorld";
+import DenimDatta from "./DenimDatta";
 
 function Home() {
     return (
@@ -10,7 +10,7 @@ function Home() {
             <ToggleMode/>
             <Background/>
             <Navigation/>
-            <HelloWorld/>
+            <DenimDatta/>
             <Timeline/>
         </div>
     );
