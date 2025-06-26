@@ -53,7 +53,7 @@ function Navigation() {
                 {/* mobile nav */}
                 <button
                     onClick={() => setIsMenuOpen((prev) => !prev)}
-                    className="md:hidden p-2 text-foreground z-50"
+                    className="md:hidden py-2 px-4 text-foreground z-50"
                     aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
                 >
                     {isMenuOpen ? <IoMdCloseCircleOutline size={24}/> : <IoMdMenu size={24}/>}{" "}
