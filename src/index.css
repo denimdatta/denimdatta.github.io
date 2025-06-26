@@ -6,6 +6,9 @@
 
     --color-primary: hsl(var(--primary));
     --color-primary-foreground: hsl(var(--primary-foreground));
+
+    --color-footer: hsla(var(--footer));
+
     --animate-beat-subtle: beat-subtle 4s ease-in-out infinite;
     --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
     --animate-meteor: meteor 5s linear infinite;
@@ -53,6 +56,8 @@
         --background: 210 40% 98%;
         --foreground: 222 47% 11%;
 
+        --footer: 360 95.5% 84.4% / 0.37;
+
         --primary: 250 47% 60%;
         --primary-foreground: 210 40% 98%;
     }
@@ -60,6 +65,8 @@
     .dark {
         --background: 222 47% 4%;
         --foreground: 223 31% 91%;
+
+        --footer: 360 56.1% 36.5% / 0.37;
 
         --primary: 250 65% 65%;
         --primary-foreground: 213 31% 91%;
