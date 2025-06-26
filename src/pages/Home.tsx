@@ -1,8 +1,8 @@
-import ToggleMode from "./ToggleMode";
-import Background from "./Background";
-import Timeline from "./Timeline";
-import Navigation from "./Navigation";
-import DenimDatta from "./DenimDatta";
+import ToggleMode from "../components/ToggleMode";
+import Background from "../components/Background";
+import Timeline from "../components/Timeline";
+import Navigation from "../components/Navigation";
+import DenimDatta from "../components/DenimDatta";
 
 function Home() {
     return (

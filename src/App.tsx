@@ -1,6 +1,6 @@
 import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Home from "./components/Home.tsx";
-import Page404 from "./components/Page404.tsx";
+import Home from "./pages/Home";
+import Page404 from "./pages/Page404";
 
 function App() {
     return (
