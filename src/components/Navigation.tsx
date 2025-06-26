@@ -5,8 +5,10 @@ import {IoMdCloseCircleOutline, IoMdMenu} from "react-icons/io";
 const navigationItems = [
     {name: "Home", href: "#denimdatta"},
     {name: "About Me", href: "#about"},
-    {name: "Career", href: "#timeline"},
+    {name: "Timeline", href: "#timeline"},
+    {name: "Career", href: "#work"},
     {name: "Skills", href: "#skills"},
+    {name: "Projects", href: "#projects"},
 ];
 
 function Navigation() {
