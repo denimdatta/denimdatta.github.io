@@ -98,12 +98,17 @@ function Background() {
 
     return (
         <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
-            {stars.map((star) => (
-                <div key={star.id} className={star.className} style={star.style}/>
-            ))}
-            {meteors.map((meteor) => (
-                <div key={meteor.id} className={meteor.className} style={meteor.style}/>
-            ))}
+            <div className="animated-bg-dark">
+                {stars.map((star) => (
+                    <div key={star.id} className={star.className} style={star.style}/>
+                ))}
+                {meteors.map((meteor) => (
+                    <div key={meteor.id} className={meteor.className} style={meteor.style}/>
+                ))}
+            </div>
+            <div className="animated-bg-light">
+                <div className="sun animate-sun"/>
+            </div>
         </div>
     );
 }
