@@ -108,6 +108,13 @@ function Background() {
             </div>
             <div className="animated-bg-light hidden">
                 <div className="sun animate-sun"/>
+                <div className="cloud w-1/2 animate-cloud"/>
+                <svg width="0" height="0">
+                    <filter id="filter">
+                        <feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10" />
+                        <feDisplacementMap in="SourceGraphic" scale="180" />
+                    </filter>
+                </svg>
             </div>
         </div>
     );
