@@ -5,6 +5,9 @@ import {CN} from "../lib/Utils";
 
 function ToggleMode() {
     const [isDarkMode, setIsDarkMode] = useState(true);
+    const animatedBG = document.getElementsByClassName("animated-bg");
+    const darkBG = document.getElementsByClassName("animated-bg-dark")[0];
+    const lightBG = document.getElementsByClassName("animated-bg-light")[0];
 
     useEffect(() => {
         const storedThemeMode = localStorage.getItem("themeMode");
@@ -15,6 +18,8 @@ function ToggleMode() {
             setIsDarkMode(true);
             document.documentElement.classList.add("dark");
         }
+
+        toogleBG(isDarkMode);
     });
 
     const toogleMode = () => {
@@ -26,6 +31,20 @@ function ToggleMode() {
             localStorage.setItem("themeMode", "dark");
         }
         setIsDarkMode(!isDarkMode);
+
+        toogleBG(isDarkMode);
+    };
+
+    const toogleBG = (isModeDark: boolean) => {
+        if (animatedBG.length > 0 && darkBG != null && lightBG != null) {
+            if (isModeDark) {
+                darkBG.classList.remove("hidden");
+                lightBG.classList.add("hidden");
+            } else {
+                darkBG.classList.add("hidden");
+                lightBG.classList.remove("hidden");
+            }
+        }
     };
 
     return (

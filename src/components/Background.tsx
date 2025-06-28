@@ -97,7 +97,7 @@ function Background() {
     };
 
     return (
-        <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+        <div className="animated-bg fixed inset-0 overflow-hidden pointer-events-none z-0">
             <div className="animated-bg-dark">
                 {stars.map((star) => (
                     <div key={star.id} className={star.className} style={star.style}/>
@@ -106,7 +106,7 @@ function Background() {
                     <div key={meteor.id} className={meteor.className} style={meteor.style}/>
                 ))}
             </div>
-            <div className="animated-bg-light">
+            <div className="animated-bg-light hidden">
                 <div className="sun animate-sun"/>
             </div>
         </div>
