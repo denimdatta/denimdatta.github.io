@@ -30,13 +30,8 @@ function Navigation() {
                 isScrolled ? "py-0 bg-background/20 backdrop-blur-md shadow-xs" : "py-1")}
         >
             <div className="container flex items-center justify-between">
-                <a
-                    className="text-xl font-bold text-primary flex items-center"
-                    href="#denimdatta"
-                >
-                    <span className="relative z-10 text-foreground">
-                        <span className="text-glow"> Denim </span>{" "}Datta
-                    </span>
+                <a className="flex items-center" href="#denimdatta">
+                    <img src="images/HeaderProfilePic.svg" className="h-15" alt="Profile Picture"/>
                 </a>
 
                 {/* desktop nav */}
