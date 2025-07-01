@@ -5,7 +5,7 @@ function DenimDatta() {
     return (
         <section id ="denimdatta"
             className="relative min-h-screen flex flex-col items-center justify-center px-4">
-            <div className='row'>
+            <div className='row pb-10'>
                 <h1 className="text-center">
                     <span className={CN("animate-wave-1 inline-block w-7 text-primary")}>D</span>
                     <span className={CN("animate-wave-2 inline-block w-7 text-primary")}>E</span>
@@ -21,7 +21,7 @@ function DenimDatta() {
                 </h1>
             </div>
 
-            <div className="row wrap-normal text-2xl font-sans">
+            <div className="row wrap-normal text-2xl font-sans pt-20 w-[75%]">
                 <div>
                     <Typewriter options={{
                         strings: [
@@ -30,6 +30,7 @@ function DenimDatta() {
                             "Skilled in Java and AWS technologies like CloudWatch, DynamoDB, SQS.",
                         ],
                         autoStart: true,
+                        loop: true,
                         cursor: '_',
                     }}/>
                 </div>
