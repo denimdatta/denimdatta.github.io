@@ -5,7 +5,19 @@ function DenimDatta() {
         <section id ="denimdatta"
             className="relative min-h-screen flex flex-col items-center justify-center px-4">
             <div className='row'>
-                <h1 style={{textAlign: 'center'}}>Denim Datta</h1>
+                <h1 className="text-center">
+                    <span className={CN("animate-wave-1 inline-block w-7 text-primary")}>D</span>
+                    <span className={CN("animate-wave-2 inline-block w-7 text-primary")}>E</span>
+                    <span className={CN("animate-wave-3 inline-block w-7 text-primary")}>N</span>
+                    <span className={CN("animate-wave-4 inline-block w-7 text-primary")}>I</span>
+                    <span className={CN("animate-wave-5 inline-block w-7 text-primary")}>M</span>
+                    <span className={CN("inline-block w-10")}/>
+                    <span className={CN("animate-wave-1 inline-block w-7 text-foreground")}>D</span>
+                    <span className={CN("animate-wave-2 inline-block w-7 text-foreground")}>A</span>
+                    <span className={CN("animate-wave-3 inline-block w-7 text-foreground")}>T</span>
+                    <span className={CN("animate-wave-4 inline-block w-7 text-foreground")}>T</span>
+                    <span className={CN("animate-wave-5 inline-block w-7 text-foreground")}>A</span>
+                </h1>
             </div>
             <div className={CN("absolute bottom-8 left-1/2 transform -translate-x-1/2",
                 "flex flex-col items-center animate-bounce",
