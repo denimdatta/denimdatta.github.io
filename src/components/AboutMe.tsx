@@ -16,6 +16,12 @@ function AboutMe() {
                     </div>
 
                     <div className={CN("grid grid-cols-1 gap-6")}>
+                        <div className={CN("gradient-border p-6 card-hover")}>
+                        </div>
+                        <div className={CN("gradient-border p-6 card-hover")}>
+                        </div>
+                        <div className={CN("gradient-border p-6 card-hover")}>
+                        </div>
                     </div>
                 </div>
             </div>
