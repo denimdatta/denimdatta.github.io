@@ -1,5 +1,6 @@
 import {SlArrowDown} from "react-icons/sl";
 import {CN} from "../lib/Utils";
+import Typewriter from "typewriter-effect";
 function DenimDatta() {
     return (
         <section id ="denimdatta"
@@ -19,6 +20,21 @@ function DenimDatta() {
                     <span className={CN("animate-wave-5 inline-block w-7 text-foreground")}>A</span>
                 </h1>
             </div>
+
+            <div className="row wrap-normal text-2xl font-sans">
+                <div>
+                    <Typewriter options={{
+                        strings: [
+                            "Master in Computer Science.",
+                            "10+ years of industrial experience.",
+                            "Skilled in Java and AWS technologies like CloudWatch, DynamoDB, SQS.",
+                        ],
+                        autoStart: true,
+                        cursor: '_',
+                    }}/>
+                </div>
+            </div>
+
             <div className={CN("absolute bottom-8 left-1/2 transform -translate-x-1/2",
                 "flex flex-col items-center animate-bounce",
             )}>
