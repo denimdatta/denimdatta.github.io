@@ -1,7 +1,21 @@
+import {useEffect, useState} from "react";
 import {SlArrowDown} from "react-icons/sl";
 import {CN} from "../lib/Utils";
 import Typewriter from "typewriter-effect";
+
 function DenimDatta() {
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        console.log(`DENIM:: ${isScrolled} :: ${window.scrollY}`)
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 150);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll)
+    }, [isScrolled]);
+
     return (
         <section id ="denimdatta"
             className="relative min-h-screen flex flex-col items-center justify-center px-4">
@@ -38,6 +52,7 @@ function DenimDatta() {
 
             <div className={CN("absolute bottom-8 left-1/2 transform -translate-x-1/2",
                 "flex flex-col items-center animate-bounce",
+                isScrolled ? "hidden" : ""
             )}>
                 <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
                 <SlArrowDown className="h-8 w-8 text-primary" />
