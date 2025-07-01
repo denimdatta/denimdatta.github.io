@@ -1,6 +1,5 @@
 import type {JSX} from "react";
-import {FaLaptop} from "react-icons/fa";
-import {FaMagnifyingGlass} from "react-icons/fa6";
+import {FaBriefcase, FaMagnifyingGlass} from "react-icons/fa6";
 import {PiStudentFill} from "react-icons/pi";
 import {CN} from "../lib/Utils";
 
@@ -26,7 +25,7 @@ class TimelineElement {
         const symCN = "w-9 h-10 m-auto p-1 block animate-beat-subtle";
 
         if (this.type === "work") {
-            this.symbol = <FaLaptop className={symCN}/>;
+            this.symbol = <FaBriefcase className={symCN}/>;
         } else if (this.type === "study") {
             this.symbol = <PiStudentFill className={symCN}/>;
         } else {
