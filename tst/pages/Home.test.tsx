@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import {describe, it} from "vitest";
-import App from '../src/App'
+import Home from "../../src/pages/Home";
 
-describe('App', () => {
-    it('renders the App component', () => {
-        render(<App/>)
+describe('Home', () => {
+    it('renders the Home component', () => {
+        render(<Home/>)
 
         screen.debug(); // prints out the jsx in the App component unto the command line
     });
