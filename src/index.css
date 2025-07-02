@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 @theme {
+    --color-border: hsl(var(--border));
     --color-background: hsl(var(--background));
     --color-foreground: hsl(var(--foreground));
 
@@ -128,6 +129,8 @@
 
         --primary: 250 47% 60%;
         --primary-foreground: 210 40% 98%;
+
+        --border: 214 32% 91%;
     }
 
     .dark {
@@ -139,6 +142,12 @@
 
         --primary: 250 65% 65%;
         --primary-foreground: 213 31% 91%;
+
+        --border: 217 33% 20%;
+    }
+
+    * {
+        @apply border-border;
     }
 
     html {
@@ -147,6 +156,7 @@
 
     body {
         @apply bg-background text-foreground transition-colors duration-300;
+        font-feature-settings: "rlig" 1, "calt" 1;
     }
 }
 
