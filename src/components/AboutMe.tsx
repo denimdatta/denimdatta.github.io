@@ -11,7 +11,7 @@ function AboutMe() {
                     About <span className="text-primary">Me</span>
                 </h2>
 
-                <div className={CN("grid grid-cols-1 md:grid-cols-2 gap-12 items-center")}>
+                <div className={CN("grid grid-cols-1 md:grid-cols-3 gap-12 items-center")}>
 
                     <div className="space-y-6">
                         <h3 className={CN("text-2xl font-semibold")}>Software Development Engineer</h3>
@@ -39,7 +39,7 @@ function AboutMe() {
                         </div>
                     </div>
 
-                    <div className={CN("grid grid-cols-1 gap-6")}>
+                    <div className={CN("grid grid-cols-1 md:col-span-2 gap-6")}>
                         <div className={CN("gradient-border p-6 card-hover")}>
                             <div className="flex items-start gap-4">
                                 <div className="p-3 rounded-full bg-primary/10">
