@@ -23,7 +23,6 @@ function DenimDatta() {
     );
 
     useEffect(() => {
-        console.log(`DENIM:: ${isScrolled} :: ${window.scrollY}`)
         const handleScroll = () => {
             setIsScrolled(window.scrollY > 150);
         };
