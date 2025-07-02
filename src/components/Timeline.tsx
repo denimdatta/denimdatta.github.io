@@ -68,11 +68,13 @@ const timelineElements = [
 function Timeline() {
 
     return (
-        <section id="timeline" className="relative py-24">
+        <section id="timeline" className="relative py-16">
             <div>
-                <h3>My Career</h3>
+                <h2 className={CN("text-3xl md:text-4xl font-bold mb-12 text-center")}>
+                    <span className="text-primary">My</span> Career
+                </h2>
                 <div
-                    className="flex flex-col md:grid grid-cols-10 mx-auto p-2 text-blue-50 z-1"
+                    className="flex flex-col md:grid grid-cols-10 mx-auto p-2 text-blue-50 z-1 py-8"
                 >
                     {timelineElements.map((te, index) => (
                         <div key={index} className="flex md:contents">

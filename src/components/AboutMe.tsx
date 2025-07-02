@@ -1,17 +1,17 @@
 import {FaBriefcase, FaCode} from "react-icons/fa6";
 import {PiStudentFill} from "react-icons/pi";
-import {CN} from "../lib/Utils.ts";
+import {CN} from "../lib/Utils";
 
 function AboutMe() {
     return (
-        <section id ="about" className="relative px-4 py-24">
+        <section id ="about" className="relative px-4 py-16">
             {" "}
             <div className="container mx-auto max-w-5xl">
                 <h2 className={CN("text-3xl md:text-4xl font-bold mb-12 text-center")}>
                     About <span className="text-primary">Me</span>
                 </h2>
 
-                <div className={CN("grid grid-cols-1 md:grid-cols-3 gap-12 items-center")}>
+                <div className={CN("grid grid-cols-1 md:grid-cols-3 gap-12 items-center py-8")}>
 
                     <div className="space-y-6">
                         <h3 className={CN("text-2xl font-semibold")}>Software Development Engineer</h3>
