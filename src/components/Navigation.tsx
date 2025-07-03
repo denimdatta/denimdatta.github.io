@@ -30,7 +30,7 @@ function Navigation() {
 				isScrolled ? "py-0 bg-background/20 backdrop-blur-md shadow-xs" : "py-1")}
 		>
 			<div className="container flex items-center justify-between">
-				<a className="flex items-center" href="#denimdatta">
+				<a className="flex items-center" href="">
 					<img src="images/HeaderProfilePic.svg" className="h-15" alt="Profile Picture"/>
 				</a>
 
