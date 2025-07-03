@@ -1,233 +1,251 @@
 @import "tailwindcss";
 
 @theme {
-    --color-border: hsl(var(--border));
-    --color-background: hsl(var(--background));
-    --color-foreground: hsl(var(--foreground));
+	--color-border: hsl(var(--border));
+	--color-background: hsl(var(--background));
+	--color-foreground: hsl(var(--foreground));
 
-    --color-primary: hsl(var(--primary));
-    --color-primary-foreground: hsl(var(--primary-foreground));
+	--color-primary: hsl(var(--primary));
+	--color-primary-foreground: hsl(var(--primary-foreground));
 
-    --color-card: hsl(var(--card));
-    --color-footer: hsla(var(--footer));
+	--color-card: hsl(var(--card));
+	--color-footer: hsla(var(--footer));
 
-    --animate-appear: appear 2s ease-out forwards;
-    --animate-wave-1: wave 2s ease-in-out 0s infinite;
-    --animate-wave-2: wave 2s ease-in-out 0.2s infinite;
-    --animate-wave-3: wave 2s ease-in-out 0.4s infinite;
-    --animate-wave-4: wave 2s ease-in-out 0.6s infinite;
-    --animate-wave-5: wave 2s ease-in-out 0.8s infinite;
-    --animate-heartbeat: heartbeat 0.8s ease-in-out infinite;
-    --animate-beat-subtle: beat-subtle 4s ease-in-out infinite;
-    --animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
-    --animate-meteor: meteor 5s linear infinite;
-    --animate-sun: sun 3s infinite alternate;
-    --animate-cloud: cloud 10s linear infinite;
+	--animate-appear: appear 2s ease-out forwards;
+	--animate-heartbeat: heartbeat 0.8s ease-in-out infinite;
+	--animate-wave-1: wave 2s ease-in-out 0s infinite;
+	--animate-wave-2: wave 2s ease-in-out 0.2s infinite;
+	--animate-wave-3: wave 2s ease-in-out 0.4s infinite;
+	--animate-wave-4: wave 2s ease-in-out 0.6s infinite;
+	--animate-wave-5: wave 2s ease-in-out 0.8s infinite;
+	--animate-heartbeat: heartbeat 0.8s ease-in-out infinite;
+	--animate-beat-subtle: beat-subtle 4s ease-in-out infinite;
+	--animate-pulse-subtle: pulse-subtle 4s ease-in-out infinite;
+	--animate-meteor: meteor 5s linear infinite;
+	--animate-sun: sun 3s infinite alternate;
+	--animate-cloud: cloud 10s linear infinite;
 
-    @keyframes appear {
-        0% {
-            opacity: 0;
-            transform: scale(10%);
-        }
-        100% {
-            opacity: 0.4;
-            transform: scale(100%);
-        }
-    }
-    @keyframes wave {
-        0%,
-        100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-20px);
-        }
-    }
-    @keyframes heartbeat {
-        0% {
-            scale: 85%;
-        }
-        20% {
-            scale: 100%;
-        }
-        40% {
-            scale: 85%;
-        }
-        60% {
-            scale: 100%;
-        }
-        80% {
-            scale: 85%;
-        }
-        100% {
-            scale: 85%;
-        }
-    }
-    @keyframes beat-subtle {
-        0% {
-            scale: 80%;
-        }
-        50%{
-            scale: 120%;
-        }
-        100% {
-            scale: 80%;
-        }
-    }
-    @keyframes pulse-subtle {
-        0%,
-        100% {
-            opacity: 1;
-        }
-        50%{
-            opacity: 0.2;
-        }
-    }
-    @keyframes meteor {
-        0% {
-            transform: rotate(135deg) translateY(0);
-            opacity: 1;
-        }
-        60% {
-            opacity: 1;
-        }
-        80% {
-            opacity: 0.5;
-        }
-        100%{
-            transform: rotate(135deg) translateY(-500px);
-            opacity: 0;
-        }
-    }
-    @keyframes sun {
-        from {
-            transform: scale(1);
-            opacity: 1;
-        }
-        to {
-            transform: scale(1.1);
-            opacity: 0.8;
-        }
-    }
-    @keyframes cloud {
-        from {
-            transform: translateX(-350%);
-        }
-        to {
-            transform: translateX(200%);
-        }
-    }
+	@keyframes appear {
+		0% {
+			opacity: 0;
+			transform: scale(10%);
+		}
+		100% {
+			opacity: 0.4;
+			transform: scale(100%);
+		}
+	}
+	@keyframes appear {
+		0% {
+			opacity: 0;
+			transform: scale(10%);
+		}
+		100% {
+			opacity: 0.4;
+			transform: scale(100%);
+		}
+	}
+	@keyframes wave {
+		0%,
+		100% {
+			transform: translateY(0);
+		}
+		50% {
+			transform: translateY(-20px);
+		}
+	}
+	@keyframes heartbeat {
+		0% {
+			scale: 85%;
+		}
+		20% {
+			scale: 100%;
+		}
+		40% {
+			scale: 85%;
+		}
+		60% {
+			scale: 100%;
+		}
+		80% {
+			scale: 85%;
+		}
+		100% {
+			scale: 85%;
+		}
+	}
+	@keyframes beat-subtle {
+		0% {
+			scale: 80%;
+		}
+		50% {
+			scale: 120%;
+		}
+		100% {
+			scale: 80%;
+		}
+	}
+	@keyframes pulse-subtle {
+		0%,
+		100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.2;
+		}
+	}
+	@keyframes meteor {
+		0% {
+			transform: rotate(135deg) translateY(0);
+			opacity: 1;
+		}
+		60% {
+			opacity: 1;
+		}
+		80% {
+			opacity: 0.5;
+		}
+		100% {
+			transform: rotate(135deg) translateY(-500px);
+			opacity: 0;
+		}
+	}
+	@keyframes sun {
+		from {
+			transform: scale(1);
+			opacity: 1;
+		}
+		to {
+			transform: scale(1.1);
+			opacity: 0.8;
+		}
+	}
+	@keyframes cloud {
+		from {
+			transform: translateX(-350%);
+		}
+		to {
+			transform: translateX(200%);
+		}
+	}
 }
 
 @layer base {
-    :root {
-        --background: 204 65% 72%;
-        --foreground: 222 47% 11%;
+	:root {
+		--background: 204 65% 72%;
+		--foreground: 222 47% 11%;
 
-        --card: 0 0% 100%;
-        --footer: 360 95.5% 84.4% / 0.37;
+		--card: 0 0% 100%;
+		--footer: 360 95.5% 84.4% / 0.37;
 
-        --primary: 250 47% 60%;
-        --primary-foreground: 210 40% 98%;
+		--primary: 250 47% 60%;
+		--primary-foreground: 210 40% 98%;
 
-        --border: 214 32% 91%;
-    }
+		--border: 214 32% 91%;
+	}
 
-    .dark {
-        --background: 222 47% 4%;
-        --foreground: 223 31% 91%;
+	.dark {
+		--background: 222 47% 4%;
+		--foreground: 223 31% 91%;
 
-        --card: 222 47% 8%;
-        --footer: 360 56.1% 36.5% / 0.37;
+		--card: 222 47% 8%;
+		--footer: 360 56.1% 36.5% / 0.37;
 
-        --primary: 250 65% 65%;
-        --primary-foreground: 213 31% 91%;
+		--primary: 250 65% 65%;
+		--primary-foreground: 213 31% 91%;
 
-        --border: 217 33% 20%;
-    }
+		--border: 217 33% 20%;
+	}
 
-    * {
-        @apply border-border;
-    }
+	* {
+		@apply border-border;
+	}
 
-    html {
-        @apply scroll-smooth;
-    }
+	html {
+		@apply scroll-smooth;
+	}
 
-    body {
-        @apply bg-background text-foreground transition-colors duration-300;
-        font-feature-settings: "rlig" 1, "calt" 1;
-    }
+	body {
+		@apply bg-background text-foreground transition-colors duration-300;
+		font-feature-settings: "rlig" 1, "calt" 1;
+	}
 }
 
 @utility container {
-    margin-inline: auto;
-    padding-inline: 2rem;
+	margin-inline: auto;
+	padding-inline: 2rem;
 
 }
 
 @utility text-glow {
-    @apply relative;
-    text-shadow: 0 0 10px rgba(100, 175, 250, 0.5);
+	@apply relative;
+	text-shadow: 0 0 10px rgba(100, 175, 250, 0.5);
 }
 
 @utility card-hover {
-    @apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
+	@apply transition-transform duration-300 hover:scale-[1.02] hover:shadow-lg;
 }
 
 @utility gradient-border {
-    @apply relative rounded-md;
-    background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
-    background-clip: padding-box;
-    border: 1px solid transparent;
+	@apply relative rounded-md;
+	background: linear-gradient(to right, hsl(var(--card)), hsl(var(--card)));
+	background-clip: padding-box;
+	border: 1px solid transparent;
+}
+
+@utility cosmic-button {
+	@apply px-6 py-2 rounded-full bg-primary text-primary-foreground font-medium
+	transition-all duration-300 hover:shadow-[0_0_10px_rgba(139,92,246,0.5)]
+	hover:scale-105 active:scale-95;
 }
 
 @utility star {
-    @apply absolute rounded-full bg-white;
-    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
+	@apply absolute rounded-full bg-white;
+	box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.4);
 }
 
 @utility meteor {
-    @apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
-    box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
+	@apply absolute bg-linear-to-r from-white via-white to-transparent rounded-full;
+	box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.3);
 }
 
 @utility sun {
-    @apply absolute top-[20%] left-[20%] h-24 w-24 rounded-full;
-    background-color: rgba(255, 215, 0, 1);
-    box-shadow: 0 0 30px 10px rgba(255, 215, 0, 0.7);
+	@apply absolute top-[20%] left-[20%] h-24 w-24 rounded-full;
+	background-color: rgba(255, 215, 0, 1);
+	box-shadow: 0 0 30px 10px rgba(255, 215, 0, 0.7);
 }
 
 @utility cloud {
-    @apply absolute h-[275px] /*left-[-500px]*/ top-[-200px];
-    border-radius: 50%;
-    filter: url(#filter);
-    box-shadow: 400px 400px 60px 0px #fff;
+	@apply absolute h-[275px] /*left-[-500px]*/
+	top-[-200px];
+	border-radius: 50%;
+	filter: url(#filter);
+	box-shadow: 400px 400px 60px 0px #fff;
 }
 
 @utility timelineCircle {
-    @apply w-10 h-10 absolute top-1/2 text-center -mt-5 rounded-full shadow;
+	@apply w-10 h-10 absolute top-1/2 text-center -mt-5 rounded-full shadow;
 }
 
 @utility timlineBox {
-    @apply p-4 rounded-xl my-4 shadow-md;
+	@apply p-4 rounded-xl my-4 shadow-md;
 }
 
 @utility work {
-    @apply bg-blue-500;
+	@apply bg-blue-500;
 }
 
 @utility study {
-    @apply bg-green-500;
+	@apply bg-green-500;
 }
 
 @utility others {
-    @apply bg-gray-600;
+	@apply bg-gray-600;
 }
 
 #root {
-    max-width: 100%;
-    margin:  0 auto;
-    padding: 0;
-    text-align: center;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
 }
