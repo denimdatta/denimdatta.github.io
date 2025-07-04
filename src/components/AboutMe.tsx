@@ -12,7 +12,7 @@ function AboutMe() {
 				</h2>
 
 				<div className={CN("grid grid-cols-1 md:grid-cols-3 gap-12 items-center py-8")}>
-
+					{/* Summary on the Left Side */}
 					<div className="space-y-6">
 						<h3 className={CN("text-2xl font-semibold")}>Software Development Engineer</h3>
 
@@ -38,8 +38,11 @@ function AboutMe() {
 							</a>
 						</div>
 					</div>
+					{/* Suymmary Section End */}
 
+					{/* BreakDown on the Right Side */}
 					<div className={CN("grid grid-cols-1 md:col-span-2 gap-6")}>
+						{/* Programmer Block Start */}
 						<div className={CN("gradient-border p-6 card-hover")}>
 							<div className="flex items-start gap-4">
 								<div className="p-3 rounded-full bg-primary/10">
@@ -58,6 +61,9 @@ function AboutMe() {
 								</div>
 							</div>
 						</div>
+						{/* Programmer Block End */}
+
+						{/* Work Block Start */}
 						<div className={CN("gradient-border p-6 card-hover")}>
 							<div className="flex items-start gap-4">
 								<div className="p-3 rounded-full bg-primary/10">
@@ -76,6 +82,9 @@ function AboutMe() {
 								</div>
 							</div>
 						</div>
+						{/* Work Block End */}
+
+						{/* Education Block Start */}
 						<div className={CN("gradient-border p-6 card-hover")}>
 							<div className="flex items-start gap-4">
 								<div className="p-3 rounded-full bg-primary/10">
@@ -93,7 +102,9 @@ function AboutMe() {
 								</div>
 							</div>
 						</div>
+						{/* Education Block End */}
 					</div>
+					{/*	BreakDown Section End */}
 				</div>
 			</div>
 		</section>

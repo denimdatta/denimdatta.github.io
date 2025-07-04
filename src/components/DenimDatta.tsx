@@ -36,8 +36,8 @@ function DenimDatta() {
 			id="denimdatta"
 			className="relative min-h-screen flex flex-col items-center justify-center px-4"
 		>
-
-			{/*Desktop Screen*/}
+			{/* Name Section Start */}
+			{/* Desktop Screen */}
 			<div className="row pb-10 gap-4 w-[75%] grid-cols-12 hidden md:flex md:visible">
 				<FaGitAlt className="col-1 h-10 animate-appear hidden md:flex md:visible"/>
 				<FaJava className="col-1 h-10 animate-appear hidden md:flex md:visible"/>
@@ -48,13 +48,15 @@ function DenimDatta() {
 				<FaGitkraken className="col-1 h-10 animate-appear hidden md:flex md:visible"/>
 			</div>
 
-			{/*Mobile Screen*/}
+			{/* Mobile Screen */}
 			<div className="md:hidden row pb-10 gap-4">
 				<h1 className="md:hidden justify-center inline-block gap-4 relative">
 					{wavyName}
 				</h1>
 			</div>
+			{/* Name Section End */}
 
+			{/* Summary Section Start */}
 			<div className="row wrap-normal text-2xl font-sans pt-20 w-[75%]">
 				<div>
 					<Typewriter
@@ -71,7 +73,9 @@ function DenimDatta() {
 					/>
 				</div>
 			</div>
+			{/* Summary Section End */}
 
+			{/* Scroll Arrow Start */}
 			<div
 				className={CN(
 					"absolute bottom-8 left-1/2 transform -translate-x-1/2",
@@ -82,6 +86,7 @@ function DenimDatta() {
 				<span className="text-sm text-muted-foreground mb-2"> Scroll </span>
 				<SlArrowDown className="h-8 w-8 text-primary"/>
 			</div>
+			{/* Scroll Arrow End */}
 		</section>
 	);
 }
