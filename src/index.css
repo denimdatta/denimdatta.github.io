@@ -177,6 +177,23 @@
 
 }
 
+@utility flip-card-wrapper {
+	@apply relative h-full w-full rounded-xl shadow-xl transition-all duration-500
+	[transform-style:preserve-3d] group-active:[transform:rotateY(180deg)] md:group-hover:[transform:rotateY(180deg)];
+}
+
+@utility flip-card-front {
+	@apply absolute inset-0 h-full w-full rounded-xl bg-card/20;
+	backface-visibility: hidden;
+}
+
+@utility flip-card-back {
+	/*@apply  bg-background/50 rotate-y-180;*/
+	@apply  absolute inset-0 h-full w-full rounded-xl bg-card px-12 text-center;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+}
+
 @utility text-glow {
 	@apply relative;
 	text-shadow: 0 0 10px rgba(100, 175, 250, 0.5);
