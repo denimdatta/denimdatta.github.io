@@ -18,7 +18,7 @@ const experienceElements = [
 				{/* Organization and Position */}
 				<div className="w-full h-[30%] mt-[5%] mb-[10%]">
 					<h1 className="w-full mb-[5%]">Amazon</h1>
-					<h4 className="w-full mt-[5%]">Software Developer Engineer</h4>
+					<h4 className="w-full mt-[5%]">Software Development Engineer</h4>
 				</div>
 				{/* Tenure and Location */}
 				<div className="w-full h-[40%] mb-1">
