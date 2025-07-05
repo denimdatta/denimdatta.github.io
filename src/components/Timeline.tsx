@@ -78,6 +78,7 @@ function Timeline() {
 				>
 					{timelineElements.map((te, index) => (
 						<div key={index} className="flex md:contents">
+							{/* Timeline with Symbol on Left Side */}
 							<div className="col-start-3 col-end-4 md:mx-auto relative">
 								<div className="h-full w-10 flex items-center justify-center">
 									<div className="h-full w-1 bg-red-800 pointer-events-none"></div>
@@ -86,7 +87,8 @@ function Timeline() {
 									{te.symbol}
 								</div>
 							</div>
-							<div className={CN(te.type, "col-start-4 col-end-9 timlineBox")}>
+							{/* TimeBox */}
+							<div className={CN(te.type, "col-start-4 col-end-9 timlineBox animate-appear-clear")}>
 								<div className="w-full inline-block">
 									<div className="w-[75%] mb-1 inline-block text-red-200">
 										<p className="h-1/2 font-semibold text-lg mb-1">{te.name}</p>
