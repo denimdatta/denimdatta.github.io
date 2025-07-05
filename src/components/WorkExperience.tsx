@@ -3,10 +3,27 @@ import FlipCard from "./FlipCard";
 
 const experienceElements = [
 	{
-		"name": "PH1",
+		"name": "Amazon",
 		"frontContent": (
 			<>
-				<h4>Placeholder 1</h4>
+				{/* Header Logo */}
+				<div className="w-full h-[30%] mt-[5%] mb-[5%] inline-block">
+					<img src="images/Logo_Amazon.svg" alt="Amazon Logo"
+						 className="w-1/2 pl-[1%] pr-[15%] md:pr-[5%] inline-block"/>
+					<img src="images/Flag_USA.svg" alt="USA"
+						 className="w-[38%] pl-[28%] pr-[2%] inline-block"/>
+					<img src="images/Flag_Canada.svg" alt="Canada"
+						 className="w-[12%] pr-[3%] inline-block"/>
+				</div>
+				{/* Organization and Position */}
+				<div className="w-full h-[30%] mt-[5%] mb-[10%]">
+					<h1 className="w-full mb-[5%]">Amazon</h1>
+					<h4 className="w-full mt-[5%]">Software Developer Engineer</h4>
+				</div>
+				{/* Tenure and Location */}
+				<div className="w-full h-[40%] mb-1">
+					<img src="images/Logo_Amazon.svg" className="w-full h-full mb-1 pr-10 pl-10" alt="Amazon Logo"/>
+				</div>
 			</>
 		),
 		"backContent": (
@@ -16,10 +33,25 @@ const experienceElements = [
 		),
 	},
 	{
-		"name": "PH2",
+		"name": "Aricent",
 		"frontContent": (
 			<>
-				<h4>Placeholder 2</h4>
+				{/* Header Logo */}
+				<div className="w-full h-[30%] mt-[5%] mb-[5%] inline-block">
+					<img src="images/Logo_Aricent.svg" alt="Aricent Logo"
+						 className="w-1/2 pl-[1%] pr-[15%] md:pr-[5%] inline-block"/>
+					<img src="images/Flag_India.svg" alt="India"
+						 className="w-1/2 pl-[38%] md:pl-[38%] pr-[3%] inline-block"/>
+				</div>
+				{/* Organization and Position */}
+				<div className="w-full h-[30%] mt-[5%] mb-[10%]">
+					<h1 className="w-full mb-[5%]">Aricent</h1>
+					<h4 className="w-full mt-[5%]">Senior Software Engineer</h4>
+				</div>
+				{/* Tenure and Location */}
+				<div className="w-full h-[40%] mb-1">
+					<img src="images/Logo_Aricent.svg" className="w-full h-full mb-1" alt="Aricent Logo"/>
+				</div>
 			</>
 		),
 		"backContent": (
@@ -29,10 +61,25 @@ const experienceElements = [
 		),
 	},
 	{
-		"name": "PH3",
+		"name": "Microsoft",
 		"frontContent": (
 			<>
-				<h4>Placeholder 3</h4>
+				{/* Header Logo */}
+				<div className="w-full h-[30%] mt-[5%] mb-[5%] inline-block">
+					<img src="images/Logo_Microsoft.svg" alt="Microsoft Logo"
+						 className="w-1/2 pl-[10%] pr-[30%] md:pr-[30%] inline-block"/>
+					<img src="images/Flag_India.svg" alt="India"
+						 className="w-1/2 pl-[38%] md:pl-[38%] pr-[3%] inline-block"/>
+				</div>
+				{/* Organization and Position */}
+				<div className="w-full h-[30%] mt-[5%] mb-[10%]">
+					<h1 className="w-full mb-[5%]">Microsoft (R&D)</h1>
+					<h4 className="w-full mt-[5%]">Intern - SDET</h4>
+				</div>
+				{/* Tenure and Location */}
+				<div className="w-full h-[40%] mb-1">
+					<img src="images/Logo_Microsoft.svg" className="w-full h-full mb-1 pl-[30%] pr-[30%]" alt="Microsoft Logo"/>
+				</div>
 			</>
 		),
 		"backContent": (
