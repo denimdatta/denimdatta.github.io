@@ -1,4 +1,5 @@
 import {FaArrowUp} from "react-icons/fa";
+import {GetDayOfWeek} from "../lib/Utils";
 
 function Footer() {
 	const date = new Date();
@@ -12,7 +13,7 @@ function Footer() {
 					Denim Datta
 				</div>
 				<div className="text-sm animate-pulse-subtle">
-					{getDayOfWeek(date)}
+					{GetDayOfWeek(date)}
 				</div>
 				<a href="#denimdatta"
 				   className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
@@ -22,13 +23,6 @@ function Footer() {
 			</div>
 		</footer>
 	);
-}
-
-
-function getDayOfWeek(date: Date) {
-	const dayOfWeek = date.getDay();
-	return isNaN(dayOfWeek) ? null :
-		['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'][dayOfWeek];
 }
 
 export default Footer;
