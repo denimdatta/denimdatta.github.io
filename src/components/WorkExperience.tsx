@@ -184,6 +184,7 @@ function WorkExperience() {
 				<div className={CN("grid grid-cols-1 md:grid-cols-3 gap-12 py-8")}>
 					{experienceElements.map((exp, index) => (
 						<FlipCard key={index} frontContent={exp.frontContent} backContent={exp.backContent}
+								  id={exp.name}/>
 					))}
 				</div>
 			</div>
