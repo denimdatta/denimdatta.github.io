@@ -189,7 +189,7 @@
 
 @utility flip-card-back {
 	/*@apply  bg-background/50 rotate-y-180;*/
-	@apply  absolute inset-0 h-full w-full rounded-xl bg-card/80 px-12 text-center;
+	@apply  absolute inset-0 h-full w-full rounded-xl bg-card/80 text-left;
 	transform: rotateY(180deg);
 	backface-visibility: hidden;
 }

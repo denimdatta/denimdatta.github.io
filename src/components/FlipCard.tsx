@@ -16,7 +16,7 @@ const FlipCard: React.FC<FlipCardProps> = ({id, frontContent, backContent}) => {
 				</div>
 				{/* Back Face */}
 				<div className="flip-card-back">
-					<div className="flex min-h-full flex-col items-start justify-center">
+					<div className="flex min-h-full flex-row">
 						{backContent}
 					</div>
 				</div>
