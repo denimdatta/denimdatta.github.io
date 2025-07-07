@@ -43,7 +43,6 @@ const experienceElements = [
 		),
 		"backContent": (
 			<>
-				<p>Placeholder 1 Content</p>
 				{/* Details */}
 				<div className="w-full h-full text-xs md:text-sm mt-[5%]">
 					<ul className="list-disc list-inside">
@@ -105,7 +104,6 @@ const experienceElements = [
 		),
 		"backContent": (
 			<>
-				<p>Placeholder 2 Content</p>
 				{/* Details */}
 				<div className="w-full h-full text-xs md:text-sm mt-[5%]">
 					<ul className="list-disc list-inside">
@@ -161,7 +159,6 @@ const experienceElements = [
 		),
 		"backContent": (
 			<>
-				<p>Placeholder 3 Content</p>
 				{/* Details */}
 				<div className="w-full h-full text-xs md:text-sm mt-[5%]">
 					<ul className="list-disc list-inside">
