@@ -44,7 +44,7 @@ const experienceElements = [
 		"backContent": (
 			<>
 				{/* Details */}
-				<div className="w-full h-full text-xs md:text-sm mt-[5%]">
+				<div className="w-full h-full text-xs md:text-sm mt-[10%] md:mt-[5%]">
 					<ul className="list-disc list-inside">
 						<li>
 							Developed APIs to enables sellers to pragmatically add and manage listings in Amazon
@@ -105,7 +105,7 @@ const experienceElements = [
 		"backContent": (
 			<>
 				{/* Details */}
-				<div className="w-full h-full text-xs md:text-sm mt-[5%]">
+				<div className="w-full h-full text-xs md:text-sm mt-[10%] md:mt-[5%]">
 					<ul className="list-disc list-inside">
 						<li>Involved in all the phases of Software Development Life Cycle.</li>
 						<li>Led cross-functional team on major feature development and delivery.</li>
@@ -160,7 +160,7 @@ const experienceElements = [
 		"backContent": (
 			<>
 				{/* Details */}
-				<div className="w-full h-full text-xs md:text-sm mt-[5%]">
+				<div className="w-full h-full text-xs md:text-sm mt-[10%] md:mt-[5%]">
 					<ul className="list-disc list-inside">
 						<li>Designed and automated test cases using C#.</li>
 						<li>Worked in List Manager Automation, part of Microsoft adCenter Project.</li>
