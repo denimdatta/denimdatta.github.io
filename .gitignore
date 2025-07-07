@@ -3,4 +3,5 @@
 node_modules
 dist
 coverage
+backups
 .DS_Store
