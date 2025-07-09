@@ -98,17 +98,17 @@ function Background() {
 
 	return (
 		<div className="animated-bg fixed inset-0 overflow-hidden pointer-events-none z-0">
-			<div className="animated-bg-dark">
+			<div aria-label="animated-bg-dark" className="animated-bg-dark">
 				{stars.map((star) => (
-					<div key={star.id} className={star.className} style={star.style}/>
+					<div aria-label="star" key={star.id} className={star.className} style={star.style}/>
 				))}
 				{meteors.map((meteor) => (
-					<div key={meteor.id} className={meteor.className} style={meteor.style}/>
+					<div aria-label="meteor" key={meteor.id} className={meteor.className} style={meteor.style}/>
 				))}
 			</div>
-			<div className="animated-bg-light hidden">
-				<div className="sun animate-sun"/>
-				<div className="cloud w-1/2 animate-cloud"/>
+			<div aria-label="animated-bg-light" className="animated-bg-light hidden">
+				<div aria-label="sun" className="sun animate-sun"/>
+				<div aria-label="cloud" className="cloud w-1/2 animate-cloud"/>
 				<svg width="0" height="0">
 					<filter id="filter">
 						<feTurbulence type="fractalNoise" baseFrequency=".01" numOctaves="10"/>
