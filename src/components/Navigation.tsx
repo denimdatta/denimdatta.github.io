@@ -30,7 +30,7 @@ function Navigation() {
 				{/* desktop nav */}
 				<div aria-label="Desktop Menu" className="hidden md:flex space-x-8 px-15">
 					{navigationItems.map((item, key) => (
-						<a key={key} href={item.href} className="flex items-center">
+						<a aria-label={`${item.name} Desktop`} key={key} href={item.href} className="flex items-center">
                             <span
 								className="relative z-10 text-foreground/80 hover:text-primary transition-colors duration-300">
                                 {item.name}
@@ -55,7 +55,8 @@ function Navigation() {
 				>
 					<div className="flex flex-col space-y-8 text-xl">
 						{navigationItems.map((item, key) => (
-							<a key={key} href={item.href} className="flex items-center"
+							<a aria-label={`${item.name} Mobile`} key={key} href={item.href}
+							   className="flex items-center"
 							   onClick={() => setIsMenuOpen(false)}>
                                 <span
 									className="relative z-10 text-foreground/80 hover:text-primary transition-colors duration-300">
