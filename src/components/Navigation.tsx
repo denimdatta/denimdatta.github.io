@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 import {CN} from "../lib/Utils.ts";
 import {IoMdCloseCircleOutline, IoMdMenu} from "react-icons/io";
+import {RiProgress6Fill} from "react-icons/ri";
 
 const navigationItems = [
 	{name: "Home", href: "#denimdatta"},
@@ -33,6 +34,10 @@ function Navigation() {
 				<a className="flex items-center" href="">
 					<img src="images/HeaderProfilePic.svg" className="h-15" alt="Profile Picture"/>
 				</a>
+
+				<span className="flex items-center h-full">
+					<RiProgress6Fill className="h-full"/> Work in Progress
+				</span>
 
 				{/* desktop nav */}
 				<div className="hidden md:flex space-x-8 px-15">
