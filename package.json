@@ -5,6 +5,7 @@
   "homepage": "https://denimdatta.github.io",
   "type": "module",
   "scripts": {
+    "clear": "rm -rf dist/ node_modules/ coverage/",
     "scratchRun": "rm -rf dist/ node_modules/ && npm i && npm run build && npm run dev",
     "dev": "vite",
     "build": "tsc -b && vite build",
