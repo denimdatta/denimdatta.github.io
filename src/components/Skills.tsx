@@ -223,7 +223,7 @@ function Skills() {
 				<div className="flex flex-wrap justify-center gap-4 mb-12 py-8">
 					{categories.map((category, key) => (
 						<button
-							key={key}
+							key={`SkillBtn-${key}`}
 							onClick={() => setActiveCategory(category)}
 							className={CN(
 								"px-5 py-2 transition-colors duration-300 capitalize rounded-full",
@@ -242,7 +242,8 @@ function Skills() {
 				<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
 					{filteredSkills.map((skill, key) => (
 						<div
-							key={key}
+							id={`SkillCard-${key}`}
+							key={`SkillCard-${key}`}
 							className="bg-card p-6 rounded-lg shadow-xs card-hover"
 						>
 							<div className="text-left mb-4 w-[60%]">
