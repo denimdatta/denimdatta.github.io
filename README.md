@@ -20,6 +20,10 @@
 * [GitHub Page User Site](https://denimdatta.github.io/)
 * [GitHub Profile](https://github.com/denimdatta)
 
+## Test Coverage
+
+<img src="https://github.com/denimdatta/denimdatta.github.io/blob/103a66843ec2b005decded98006387c4b4c002f6/public/images/TestCoverageResult.png?raw=true" alt="Test Coverage Result" width="750">
+
 ## References
 
 * [Vite Guide](https://vite.dev/guide/)
