@@ -109,7 +109,7 @@ function Projects() {
 					))};
 				</div>
 
-				<div className="text-center mt-12">
+				<div className="schoolbell-regular text-glow text-center mt-12 animate-beat-subtle">
 					<a className={CN("cosmic-button w-fit flex items-center mx-auto gap-2")}
 					   target="_blank"
 					   href="https://github.com/denimdatta"
