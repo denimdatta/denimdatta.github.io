@@ -24,8 +24,9 @@ const projects = [
 	{
 		id: 3,
 		title: "Secure Banking System",
-		description: "",
-		image: "images/projects/SecureBankingSystem.jpeg",
+		description: "Developed a skeleton secure banking system (SBS) with limited  functional, performance, " +
+			"and security requirements for secure banking transactions and user account management. ",
+		image: "images/projects/SecureBankingSystem.png",
 		tags: ["Java", "Academic Project"],
 		githubUrl: "https://github.com/kjayashr/secure-banking-system-group3",
 		demoUrl: "",
