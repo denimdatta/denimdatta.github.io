@@ -175,7 +175,7 @@ function WorkExperience() {
 	return (
 		<section id="work" className="relative px-4 py-16">
 			<div className="row text-center">
-				<h2 className={CN("text-3xl md:text-4xl font-bold mb-12 text-center")}>
+				<h2 className={CN("tourney-regular text-glow text-3xl md:text-4xl font-bold mb-12 text-center")}>
 					Work <span className="text-primary">Experience</span>
 				</h2>
 				<div className={CN("grid grid-cols-1 md:grid-cols-3 gap-12 py-8")}>

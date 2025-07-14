@@ -7,7 +7,7 @@ function AboutMe() {
 		<section id="about" className="relative px-4 py-16">
 			{" "}
 			<div className="container mx-auto max-w-5xl">
-				<h2 className={CN("text-3xl md:text-4xl font-bold mb-12 text-center")}>
+				<h2 className={CN("tourney-regular text-glow text-3xl md:text-4xl font-bold mb-12 text-center")}>
 					About <span className="text-primary">Me</span>
 				</h2>
 

@@ -42,7 +42,7 @@ function Projects() {
 		<section id="projects"
 				 className={CN("relative px-4 py-24")}>
 			<div className={CN("container mx-auto max-w-5xl")}>
-				<h2 className={CN("text-3xl md:text-4xl font-bold mb-12 text-center")}>
+				<h2 className={CN("tourney-regular text-glow text-3xl md:text-4xl font-bold mb-12 text-center")}>
 					Featured <span className="text-primary">Projects</span>
 				</h2>
 

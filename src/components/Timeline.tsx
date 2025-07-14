@@ -70,7 +70,7 @@ function Timeline() {
 	return (
 		<section id="timeline" className="relative py-16">
 			<div>
-				<h2 className={CN("text-3xl md:text-4xl font-bold mb-12 text-center")}>
+				<h2 className={CN("tourney-regular text-glow text-3xl md:text-4xl font-bold mb-12 text-center")}>
 					<span className="text-primary">My</span> Career
 				</h2>
 				<div
