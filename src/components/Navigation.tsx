@@ -16,7 +16,7 @@ function Navigation() {
 
 	return (
 		<nav className={CN("fixed w-full z-40 transition-all duration-300",
-			"bg-background/20 backdrop-blur-md py-1")}>
+			"bg-background/20 md:backdrop-blur-md py-1")}>
 			<div className="container flex items-center justify-between">
 				<a className="flex items-center" href="">
 					<img src="images/HeaderProfilePic.svg" className="h-15" alt="Profile Picture"/>
