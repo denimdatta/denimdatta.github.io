@@ -9,7 +9,7 @@ function Footer() {
 				<div className="text-sm animate-pulse-subtle">
 					{date.toDateString().substring(4)}
 				</div>
-				<div className="dancing-script-medium px-2 text-2xl animate-heartbeat">
+				<div className="monsieur-la-doulaise-regular px-2 text-2xl animate-heartbeat">
 					Denim Datta
 				</div>
 				<div className="text-sm animate-pulse-subtle">

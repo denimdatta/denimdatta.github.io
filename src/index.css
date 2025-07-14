@@ -258,10 +258,9 @@
 	@apply bg-gray-600;
 }
 
-@utility dancing-script-medium {
-	font-family: "Dancing Script", cursive;
-	font-optical-sizing: auto;
-	font-weight: 500;
+@utility monsieur-la-doulaise-regular {
+	font-family: "Monsieur La Doulaise", cursive;
+	font-weight: 400;
 	font-style: normal;
 }
 
