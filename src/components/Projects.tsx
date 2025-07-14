@@ -114,7 +114,7 @@ function Projects() {
 					   target="_blank"
 					   href="https://github.com/denimdatta"
 					>
-						Check My Github <FaArrowRight size={16}/>
+						Check My Github <FaArrowRight size={16}/> <FaGithub size={24}/>
 					</a>
 				</div>
 
