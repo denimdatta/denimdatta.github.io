@@ -22,6 +22,7 @@
 
 ## Demo
 
+### [Portfolio](https://denimdatta.github.io/)
 <img src="https://github.com/denimdatta/denimdatta.github.io/blob/982a43b727f6126f0e9a468f633d50e58264ffb9/public/files/PortfolioDemo.gif?raw=true" alt="Test Coverage Result" width="500">
 
 ## Test Coverage (*2025-07-16*)
