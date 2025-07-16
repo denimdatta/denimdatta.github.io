@@ -24,9 +24,9 @@
 
 <img src="https://github.com/denimdatta/denimdatta.github.io/blob/982a43b727f6126f0e9a468f633d50e58264ffb9/public/files/PortfolioDemo.gif?raw=true" alt="Test Coverage Result" width="500">
 
-## Test Coverage
+## Test Coverage (*2025-07-16*)
 
-<img src="https://github.com/denimdatta/denimdatta.github.io/blob/103a66843ec2b005decded98006387c4b4c002f6/public/images/TestCoverageResult.png?raw=true" alt="Test Coverage Result" width="500">
+<img src="https://github.com/denimdatta/denimdatta.github.io/blob/main/public/images/TestCoverageResult.png?raw=true" alt="Test Coverage Result" width="500">
 
 ## References
 
