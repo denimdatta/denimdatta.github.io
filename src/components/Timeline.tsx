@@ -73,7 +73,7 @@ const timelineElements = [
 	new TimelineElement("Study", "KIIT University", "August 2008 - May 2012",
 		"Bhubaneswar, Odisha, India", "Bachelor of Technology, Computer Science and Engineering ",
 		"", "images/Logo_KIIT.svg"),
-	new TimelineElement("Testing", "Burdwan Municipal High School", "January 1996 - May 2008",
+	new TimelineElement("Study", "Burdwan Municipal High School", "January 1996 - May 2008",
 		"Burdwan, West Bengal, India", "Building Foundation", "", ""),
 ];
 
