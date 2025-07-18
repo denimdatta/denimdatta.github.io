@@ -10,3 +10,7 @@ export const GetDayOfWeek = (date: Date) => {
 	const dayOfWeek = date.getDay();
 	return isNaN(dayOfWeek) ? null : weekdays[date.getDay()];
 }
+
+export const IsNullOrEmpty = (value: string | null | undefined): boolean => {
+	return value == null || (typeof value === 'string' && value.trim().length === 0);
+}
