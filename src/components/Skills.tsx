@@ -195,7 +195,8 @@ const skills = [
 		icon: <SiGitkraken className={CN(iconCN)}/>,
 	},
 	{
-		name: "Fork Git Client",
+		name: "Fork",
+		note: "Git Client",
 		type: "tools",
 		exp: 6,
 		icon: <PiGitFork className={CN(iconCN)}/>,
@@ -247,9 +248,13 @@ function Skills() {
 							className="bg-card p-6 rounded-lg shadow-xs card-hover"
 						>
 							<div className="text-left mb-4 w-[60%]">
+								{skill.icon}
 								<h3 className="font-semibold text-lg">
-									{skill.icon} {skill.name}
+									{skill.name}
 								</h3>
+								<p>
+									{skill.note}
+								</p>
 							</div>
 							<div className="w-full bg-secondary/50 h-2 rounded-full overflow-hidden">
 								<div
@@ -259,9 +264,9 @@ function Skills() {
 							</div>
 
 							<div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.exp}Y
-                </span>
+								<span className="text-sm text-muted-foreground">
+									{skill.exp}Y
+								</span>
 							</div>
 						</div>
 					))}
