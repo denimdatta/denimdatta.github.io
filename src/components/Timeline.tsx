@@ -1,4 +1,4 @@
-import type {JSX} from "react";
+import {type JSX, useEffect, useRef, useState} from "react";
 import {FaBriefcase, FaMagnifyingGlass} from "react-icons/fa6";
 import {PiStudentFill} from "react-icons/pi";
 import {CN} from "../lib/Utils";
@@ -11,6 +11,7 @@ class TimelineElement {
 	title: string;
 	synopsis: string;
 	symbol: JSX.Element;
+	timebox: JSX.Element;
 
 	// Constructor
 	constructor(type: string, name: string, duration: string,
@@ -61,11 +62,56 @@ const timelineElements = [
 		"Bhubaneswar, Odisha, India", "Bachelor of Technology, Computer Science and Engineering ",
 		""),
 	new TimelineElement("Testing", "Burdwan Municipal High School", "January 1996 - May 2008",
-		"Burdwan, West Bengal, India", "Building Foundation",
-		""),
+		"Burdwan, West Bengal, India", "Building Foundation", "", ""),
 ];
 
+function useTest(te: TimelineElement) {
+	const [isVisible, setVisible] = useState(false);
+	const domRef = useRef<HTMLDivElement>(null);
+	useEffect(() => {
+		const observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => setVisible(entry.isIntersecting));
+		});
+		if (domRef.current) {
+			observer.observe(domRef.current);
+		}
+		return () => {
+			if (domRef.current) {
+				observer.unobserve(domRef.current)
+			}
+		};
+	}, []);
+
+	return (
+		<div
+			ref={domRef}
+			className={CN(te.type, "col-start-4 col-end-9 timlineBox",
+				`${isVisible}`,
+				isVisible ? "animate-appear-clear" : "opacity-0"
+			)}
+		>
+			<div className="w-full inline-block">
+				<div className="w-[75%] mb-1 inline-block text-red-200">
+					<p className="h-1/2 font-semibold text-lg mb-1">{te.name}</p>
+					<p className="h-1/2 font-semibold text-sm mb-1">{te.title}</p>
+				</div>
+				<div className="w-[25%] mb-1 inline-block text-yellow-200">
+					<p className="h-1/2 right-0 font-thin text-sm text-right mb-1 p-0 italic inline-block">{te.duration}</p>
+					<p className="h-1/2 right-0 font-thin text-sm text-right mb-1 p-0 italic inline-block">{te.location}</p>
+				</div>
+			</div>
+			<p className="leading-tight text-justify text-black">
+				{te.synopsis}
+			</p>
+		</div>
+	);
+
+}
+
 function Timeline() {
+	for (let i = 0; i < timelineElements.length; i++) {
+		timelineElements[i].timebox = useTest(timelineElements[i]);
+	}
 
 	return (
 		<section id="timeline" className="relative py-16">
@@ -87,22 +133,7 @@ function Timeline() {
 									{te.symbol}
 								</div>
 							</div>
-							{/* TimeBox */}
-							<div className={CN(te.type, "col-start-4 col-end-9 timlineBox animate-appear-clear")}>
-								<div className="w-full inline-block">
-									<div className="w-[75%] mb-1 inline-block text-red-200">
-										<p className="h-1/2 font-semibold text-lg mb-1">{te.name}</p>
-										<p className="h-1/2 font-semibold text-sm mb-1">{te.title}</p>
-									</div>
-									<div className="w-[25%] mb-1 inline-block text-yellow-200">
-										<p className="h-1/2 right-0 font-thin text-sm text-right mb-1 p-0 italic inline-block">{te.duration}</p>
-										<p className="h-1/2 right-0 font-thin text-sm text-right mb-1 p-0 italic inline-block">{te.location}</p>
-									</div>
-								</div>
-								<p className="leading-tight text-justify text-black">
-									{te.synopsis}
-								</p>
-							</div>
+							{useTest(te)}
 						</div>
 					))}
 				</div>
