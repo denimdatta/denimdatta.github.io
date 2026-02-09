@@ -69,6 +69,8 @@ function DenimDatta() {
 							autoStart: true,
 							loop: true,
 							cursor: "_",
+							delay: 30,
+							deleteSpeed: 10,
 						}}
 					/>
 				</div>
