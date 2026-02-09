@@ -1,4 +1,5 @@
-import {act, render, RenderResult} from '@testing-library/react'
+import {act, render} from '@testing-library/react'
+import type {RenderResult} from '@testing-library/react'
 import {describe, expect, it} from "vitest";
 import DenimDatta from "../../src/components/DenimDatta";
 
