@@ -11,10 +11,13 @@ const experienceElements = [
 				{/* Header Logo */}
 				<div className="w-full h-1/4 mt-[5%] inline-block">
 					<img src="images/Logo_Amazon.svg" alt="Amazon Logo"
+						 loading="lazy" decoding="async"
 						 className="w-1/2 pt-2 pb-2 pl-[10%] pr-[30%] md:pr-[30%] inline-block"/>
 					<img src="images/Flag_USA.svg" alt="USA"
+						 loading="lazy" decoding="async"
 						 className="w-[38%] pl-[25%] pr-[4%] inline-block"/>
 					<img src="images/Flag_Canada.svg" alt="Canada"
+						 loading="lazy" decoding="async"
 						 className="w-[12%] pr-[3%] inline-block"/>
 				</div>
 				{/* Organization and Position */}
@@ -79,8 +82,10 @@ const experienceElements = [
 				{/* Header Logo */}
 				<div className="w-full h-1/4 mt-[5%] inline-block">
 					<img src="images/Logo_Aricent.svg" alt="Aricent Logo"
+						 loading="lazy" decoding="async"
 						 className="w-1/2 pl-[1%] pr-[15%] md:pr-[5%] inline-block"/>
 					<img src="images/Flag_India.svg" alt="India"
+						 loading="lazy" decoding="async"
 						 className="w-1/2 pl-[38%] md:pl-[38%] pr-[3%] inline-block"/>
 				</div>
 				{/* Organization and Position */}
@@ -134,8 +139,10 @@ const experienceElements = [
 				{/* Header Logo */}
 				<div className="w-full h-1/4 mt-[5%] inline-block">
 					<img src="images/Logo_Microsoft.svg" alt="Microsoft Logo"
+						 loading="lazy" decoding="async"
 						 className="w-1/2 pl-[10%] pr-[30%] md:pr-[30%] inline-block"/>
 					<img src="images/Flag_India.svg" alt="India"
+						 loading="lazy" decoding="async"
 						 className="w-1/2 pl-[38%] md:pl-[38%] pr-[3%] inline-block"/>
 				</div>
 				{/* Organization and Position */}

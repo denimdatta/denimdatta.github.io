@@ -58,6 +58,8 @@ function Projects() {
 								<img
 									src={project.image}
 									alt={project.title}
+									loading="lazy"
+									decoding="async"
 									className={CN("w-full h-full object-cover transition-transform",
 										"duration-500 group-hover:scale-110")}
 								/>
