@@ -1,4 +1,4 @@
-import {CN} from "../lib/Utils";
+import {CN, IsNullOrEmpty} from "../lib/Utils";
 import {FaArrowRight, FaExternalLinkAlt, FaGithub} from "react-icons/fa";
 
 const projects = [
@@ -32,10 +32,6 @@ const projects = [
 		demoUrl: "",
 	},
 ];
-
-function isEmptyString(value: string | null | undefined): boolean {
-	return value === null || value === undefined || value === "";
-};
 
 function Projects() {
 	return (
@@ -85,6 +81,7 @@ function Projects() {
 										<a
 											href={project.githubUrl}
 											target="_blank"
+											rel="noopener noreferrer"
 											className={CN("px-6 py-2 rounded-full",
 												"transition-colors duration-300 bg-primary")}
 										>
@@ -93,11 +90,13 @@ function Projects() {
 											</span>
 										</a>
 										<a
-											href={project.demoUrl}
+											href={project.demoUrl || undefined}
 											target="_blank"
+											rel="noopener noreferrer"
+											aria-disabled={IsNullOrEmpty(project.demoUrl)}
 											className={CN("px-6 py-2 rounded-full",
 												"transition-colors duration-300 bg-primary",
-												isEmptyString(project.demoUrl) ? "pointer-events-none opacity-50" : "")}
+												IsNullOrEmpty(project.demoUrl) ? "pointer-events-none opacity-50" : "")}
 										>
 											<span
 												className={CN("text-foreground")}>
@@ -108,14 +107,15 @@ function Projects() {
 								</div>
 							</div>
 						</div>
-					))};
-				</div>
+						))}
+					</div>
 
-				<div className="schoolbell-regular text-glow text-center mt-12 animate-beat-subtle">
-					<a className={CN("cosmic-button w-fit flex items-center mx-auto gap-2")}
-					   target="_blank"
-					   href="https://github.com/denimdatta"
-					>
+					<div className="schoolbell-regular text-glow text-center mt-12 animate-beat-subtle">
+						<a className={CN("cosmic-button w-fit flex items-center mx-auto gap-2")}
+						   target="_blank"
+						   rel="noopener noreferrer"
+						   href="https://github.com/denimdatta"
+						>
 						Check My Github <FaArrowRight size={16}/> <FaGithub size={24}/>
 					</a>
 				</div>
