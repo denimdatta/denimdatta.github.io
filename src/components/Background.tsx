@@ -61,13 +61,25 @@ function Background() {
 		generateStars();
 		generateMeteors();
 
+		let rafId: number | null = null;
 		const handleResize = () => {
-			generateStars();
+			if (rafId !== null) {
+				cancelAnimationFrame(rafId);
+			}
+			rafId = requestAnimationFrame(() => {
+				generateStars();
+				rafId = null;
+			});
 		};
 
 		window.addEventListener('resize', handleResize);
 
-		return () => window.removeEventListener('resize', handleResize);
+		return () => {
+			window.removeEventListener('resize', handleResize);
+			if (rafId !== null) {
+				cancelAnimationFrame(rafId);
+			}
+		};
 	}, []);
 
 	const generateStars = () => {
