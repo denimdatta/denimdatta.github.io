@@ -33,7 +33,7 @@ class TimelineElement {
 		const symCN = "w-15 h-15 m-auto p-1 animate-beat-subtle";
 
 		if (!IsNullOrEmpty(logoLocation)) {
-			this.symbol = <img src={logoLocation} className={symCN} alt={this.name}/>;
+			this.symbol = <img src={logoLocation} className={symCN} alt={this.name} loading="lazy" decoding="async"/>;
 		} else if (this.type === "work") {
 			this.symbol = <FaBriefcase className={symCN}/>;
 		} else if (this.type === "study") {
