@@ -6,7 +6,7 @@ describe('WorkExperience', () => {
 	it('displays the work experience section title', () => {
 		const renderResult = render(<WorkExperience/>);
 
-		expect(renderResult.getByText((_, element) => element.textContent === 'Work Experience')).toBeInTheDocument();
+		expect(renderResult.getByText((_, element) => element?.textContent === 'Work Experience')).toBeInTheDocument();
 	});
 
 	it('displays company name and position', () => {

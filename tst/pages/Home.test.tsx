@@ -32,8 +32,9 @@ describe('Home', () => {
 		expect(bgLight.outerHTML).toContain("animated-bg-light");
 		expect(bgLight.outerHTML).not.toContain("animated-bg-light hidden");
 
-		const toggleBtn = renderResult.getByText("Toggle Theme").parentElement.firstElementChild;
-		await ue.click(toggleBtn);
+		const toggleBtn = renderResult.getByText("Toggle Theme").parentElement?.firstElementChild;
+		expect(toggleBtn).not.toBeNull();
+		await ue.click(toggleBtn as HTMLElement);
 
 		// Test that background is switched after toggle
 		expect(bgDark.outerHTML).toContain("animated-bg-dark");

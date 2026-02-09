@@ -6,7 +6,7 @@ describe('AboutMe', () => {
 	it('renders the AboutMe component', () => {
 		render(<AboutMe/>);
 
-		const renderBody = document.querySelector("body");
+		const renderBody = document.body;
 
 		expect(renderBody.innerHTML).toContain("Software Development Engineer");
 		expect(renderBody.innerHTML).toContain("Download Resume");
