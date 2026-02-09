@@ -13,6 +13,22 @@ beforeAll(() => {
 	}));
 
 	vi.stubGlobal('IntersectionObserver', IntersectionObserverMock);
+
+	if (typeof globalThis.localStorage?.getItem !== "function") {
+		const storage = new Map<string, string>();
+		vi.stubGlobal("localStorage", {
+			getItem: (key: string) => (storage.has(key) ? storage.get(key)! : null),
+			setItem: (key: string, value: string) => {
+				storage.set(key, String(value));
+			},
+			removeItem: (key: string) => {
+				storage.delete(key);
+			},
+			clear: () => {
+				storage.clear();
+			},
+		});
+	}
 })
 
 // Clear stubs after all tests

@@ -28,8 +28,15 @@ describe('Background', () => {
 
 
 	it('renders the Background component with resize', () => {
-		let renderResult: RenderResult;
-		act(() => renderResult = render(<Background/>));
+		const originalRaf = globalThis.requestAnimationFrame;
+		const originalCaf = globalThis.cancelAnimationFrame;
+		globalThis.requestAnimationFrame = (cb: FrameRequestCallback) => {
+			cb(0);
+			return 0;
+		};
+		globalThis.cancelAnimationFrame = () => {};
+
+		const renderResult = render(<Background/>);
 
 		// Star and Meteor count
 		const expectedStarCount = Math.floor(window.innerWidth * window.innerHeight / 10000);
@@ -55,5 +62,7 @@ describe('Background', () => {
 		expect(renderResult.getAllByLabelText("sun").length).toEqual(1);
 		expect(renderResult.getAllByLabelText("cloud").length).toEqual(1);
 
+		globalThis.requestAnimationFrame = originalRaf;
+		globalThis.cancelAnimationFrame = originalCaf;
 	});
 });
