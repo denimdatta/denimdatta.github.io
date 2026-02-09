@@ -1,5 +1,5 @@
 import {act, render} from '@testing-library/react'
-import {describe, expect, it} from "vitest";
+import {describe, expect, it, vi} from "vitest";
 import Background from "../../src/components/Background";
 
 describe('Background', () => {
@@ -61,6 +61,28 @@ describe('Background', () => {
 		// Sun and Cloud Count
 		expect(renderResult.getAllByLabelText("sun").length).toEqual(1);
 		expect(renderResult.getAllByLabelText("cloud").length).toEqual(1);
+
+		globalThis.requestAnimationFrame = originalRaf;
+		globalThis.cancelAnimationFrame = originalCaf;
+	});
+
+	it('cancels pending animation frame on rapid resize', () => {
+		const originalRaf = globalThis.requestAnimationFrame;
+		const originalCaf = globalThis.cancelAnimationFrame;
+		const rafSpy = vi.fn((_cb: FrameRequestCallback) => 1);
+		const cafSpy = vi.fn();
+		globalThis.requestAnimationFrame = rafSpy;
+		globalThis.cancelAnimationFrame = cafSpy;
+
+		const renderResult = render(<Background/>);
+
+		act(() => window.dispatchEvent(new Event('resize')));
+		act(() => window.dispatchEvent(new Event('resize')));
+
+		expect(cafSpy).toHaveBeenCalled();
+
+		renderResult.unmount();
+		expect(cafSpy).toHaveBeenCalledTimes(2);
 
 		globalThis.requestAnimationFrame = originalRaf;
 		globalThis.cancelAnimationFrame = originalCaf;

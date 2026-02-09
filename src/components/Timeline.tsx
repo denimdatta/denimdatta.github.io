@@ -152,3 +152,4 @@ function Timeline() {
 }
 
 export default Timeline;
+export {TimelineElement};

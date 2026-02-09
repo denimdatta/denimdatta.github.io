@@ -1,5 +1,6 @@
 import {render} from '@testing-library/react'
-import {afterEach, describe, expect, it} from "vitest";
+import {renderToString} from "react-dom/server";
+import {afterEach, describe, expect, it, vi} from "vitest";
 import {userEvent} from "@testing-library/user-event";
 import ToggleMode from "../../src/components/ToggleMode";
 
@@ -108,5 +109,26 @@ describe('ToggleMode', () => {
 		// Moon symbol should be absent (text-blue-900)
 		expect(btn.innerHTML).toContain("text-yellow-300");
 		expect(btn.innerHTML).not.toContain("text-blue-900");
+	});
+
+	it('renders in SSR when window is undefined', () => {
+		const originalWindow = globalThis.window;
+		const originalLocalStorage = globalThis.localStorage;
+		Object.defineProperty(globalThis, "window", {value: undefined, configurable: true});
+		Object.defineProperty(globalThis, "localStorage", {
+			value: {
+				getItem: vi.fn(),
+				setItem: vi.fn(),
+				removeItem: vi.fn(),
+				clear: vi.fn(),
+			},
+			configurable: true,
+		});
+
+		const markup = renderToString(<ToggleMode/>);
+		expect(markup).toContain("Toggle Theme");
+
+		Object.defineProperty(globalThis, "window", {value: originalWindow, configurable: true});
+		Object.defineProperty(globalThis, "localStorage", {value: originalLocalStorage, configurable: true});
 	});
 });
