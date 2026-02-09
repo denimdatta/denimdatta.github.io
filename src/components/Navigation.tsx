@@ -18,7 +18,7 @@ function Navigation() {
 		<nav className={CN("fixed w-full z-40 transition-all duration-300",
 			"bg-background/20 md:backdrop-blur-md py-1")}>
 			<div className="container flex items-center justify-between">
-				<a className="flex items-center" href="">
+				<a className="flex items-center" href="#denimdatta">
 					<img src="images/HeaderProfilePic.svg" className="h-15" alt="Profile Picture"/>
 				</a>
 
@@ -45,7 +45,7 @@ function Navigation() {
 				</button>
 
 				<div aria-label="Mobile Menu"
-					 className={CN("fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col",
+					 className={CN("fixed inset-0 bg-background/95 backdrop-blur-md z-40 flex flex-col",
 						 "items-center justify-center transition-all duration-300 md:hidden",
 						 isMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none")}
 				>
